@@ -3,7 +3,7 @@
 https://docs.github.com/en/actions/quickstart
 
 `.github/workflows/actions.yaml`
-```
+```yaml
 name: Actions on push
 run-name: Triggered by ${{ github.actor }}
 on:
