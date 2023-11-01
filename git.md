@@ -6,25 +6,40 @@ git branch -M main
 git push -u origin main
 ```
 
+## List branches
+
+List local branches
 ```shell
-# list all branches
+git branch
+```
+
+List remote branches
+```shell
+git branch -r
+```
+
+List all branches
+```shell
 git branch -a
 ```
 
+## Create a local branch
+
 ```shell
-# create a local branch
-git branch develop origin/develop
-
-# checkout a local branch
-git checkout develop
-
-# checkout a remote branch
-git checkout -b develop origin/develop
+git switch -c feat
 ```
+
+```shell
+git switch -c feat dev
+```
+
+## Graph
 
 ```shell
 git log --graph --oneline --decorate
 ```
+
+## Clear
 
 ```shell
 # delete uncommitted files
