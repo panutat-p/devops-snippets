@@ -10,4 +10,12 @@ on:
   push:
     branches:
       - main
+
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Triggered by a ${{ github.event_name }} event"
+      - run: echo "Repository is ${{ github.repository }}"
+      - run: echo "Branch is ${{ github.ref }}"
 ```
