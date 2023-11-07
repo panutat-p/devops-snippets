@@ -41,11 +41,11 @@ rules:
 
 ```yaml
 rules:
-  - if: $CI_MERGE_REQUEST_SOURCE_BRANCH_NAME =~ /^feature/ && $CI_MERGE_REQUEST_TARGET_BRANCH_NAME != $CI_DEFAULT_BRANCH
-    when: never
+  - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
 ```
 
 ```yaml
 rules:
-  - if: $CI_PIPELINE_SOURCE == 'merge_request_event'
+  - exists:
+      - $CI_COMMIT_TAG
 ```
