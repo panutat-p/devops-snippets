@@ -1,4 +1,4 @@
-# GitLab
+# GitLab CI
 
 ## Example
 
