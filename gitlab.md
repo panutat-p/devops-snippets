@@ -13,6 +13,7 @@ info:
   stage: prepare
   script:
     - date
+    - echo "Job ID is $CI_JOB_ID"
     - echo "Triggered by $CI_PIPELINE_SOURCE"
     - echo "Run by $GITLAB_USER_LOGIN"
     - echo "Branch is $CI_COMMIT_BRANCH"
