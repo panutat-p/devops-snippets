@@ -1,12 +1,20 @@
 # Git
 
+https://stackoverflow.com/a/70454786
+
+## Set up
+
 ```shell
 git remote add origin https://github.com/user/repo.git
 git branch -M main
 git push -u origin main
 ```
 
-## List branches
+## Download
+
+```shell
+git fetch
+```
 
 List local branches
 ```shell
@@ -23,17 +31,38 @@ List all branches
 git branch -a
 ```
 
-## Create a local branch
-
+Checkout local or remote branch
 ```shell
-git switch -c feat
+git switch feat/v1
 ```
 
+Create a new branch from the current branch
 ```shell
-git switch -c feat dev
+git switch -c feat/v1
 ```
 
-## Graph
+Create a new branch from the remote branch
+```shell
+git switch -c feat/v2 /origin/main
+```
+
+## Manage
+
+Rename current branch
+```shell
+git branch -m new-branch-name
+```
+
+Delete local branch
+```shell
+git branch -d feat/v1
+```
+
+## History
+
+```shell
+git status
+```
 
 ```shell
 git log --graph --oneline --decorate
@@ -41,15 +70,27 @@ git log --graph --oneline --decorate
 
 ## Clear
 
+Discard uncommitted local changes
 ```shell
-# delete uncommitted files
-git clean -fd
+git restore
+```
 
-# clear local changes
-git reset --hard
+Delete uncommitted files
+```shell
+git clean -fd
+```
+
+Removes the file from the index but leaves it in the working directory
+```shell
+git rm --cached .DS_Store
+```
+
+## Upload
+
+```shell
+git commit -m "feat: update README.md"
 ```
 
 ```shell
-# removes the file from the index but leaves it in the working directory
-git rm --cached .DS_Store
+git push -u origin feat/v1
 ```
