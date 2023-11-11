@@ -13,6 +13,10 @@ git push -u origin main
 ## Download
 
 ```shell
+git clone -b main https://github.com/freeCodeCamp/freeCodeCamp.git
+```
+
+```shell
 git fetch
 ```
 
