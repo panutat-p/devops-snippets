@@ -5,7 +5,7 @@ apt install nano
 ```
 
 `~/.nanorc`
-```
+```bash
 set linenumbers
 set zap
 set tabsize 2
