@@ -2,8 +2,6 @@
 
 https://bash-prompt.net/guides/nanorc-settings
 
-https://github.com/serialhex/nano-highlight#nano-highlight
-
 ```shell
 apt install nano
 ```
@@ -16,8 +14,18 @@ apk add nano
 yum install nano
 ```
 
+## Nano highlight
+
+https://github.com/serialhex/nano-highlight#nano-highlight
+
+```shell
+git clone https://github.com/serialhex/nano-highlight ~/.nano
+```
+
 `~/.nanorc`
 ```bash
+include "~/.nano/*.nanorc"
+
 set linenumbers
 set zap
 set tabsize 2
