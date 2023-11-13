@@ -22,6 +22,10 @@ https://github.com/serialhex/nano-highlight#nano-highlight
 git clone https://github.com/serialhex/nano-highlight ~/.nano
 ```
 
+```shell
+wget -O ~/.nano http://go-lang.cat-v.org/text-editors/nano/go.nanorc
+```
+
 `~/.nanorc`
 ```bash
 include "~/.nano/*.nanorc"
