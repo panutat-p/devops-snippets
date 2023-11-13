@@ -23,7 +23,7 @@ git clone https://github.com/serialhex/nano-highlight ~/.nano
 ```
 
 ```shell
-wget -O ~/.nano http://go-lang.cat-v.org/text-editors/nano/go.nanorc
+wget -O ~/.nano/go.nanorc http://go-lang.cat-v.org/text-editors/nano/go.nanorc
 ```
 
 `~/.nanorc`
