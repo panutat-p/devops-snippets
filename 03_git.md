@@ -10,6 +10,12 @@ git branch -M main
 git push -u origin main
 ```
 
+```shell
+git config --global user.name "monkey"
+git config --global user.email "monkey@gmail.com"
+git config --global init.defaultBranch main
+```
+
 ## Download
 
 ```shell
@@ -70,6 +76,18 @@ git status
 
 ```shell
 git log --graph --oneline --decorate
+```
+
+## Checkout
+
+Checkout at the revision hash
+```shell
+git checkout revision_hash
+```
+
+Create a new branch from revision hash
+```shell
+git checkout -b feat/v1 revision_hash f668219
 ```
 
 ## Clear
