@@ -28,7 +28,7 @@ https://docs.docker.com/build/building/multi-stage
 
 ```Dockerfile
 FROM golang:1.21 as builder
-WORKDIR /app
+WORKDIR /opt
 COPY go.mod go.sum ./
 RUN go mod download
 COPY . ./
@@ -40,7 +40,7 @@ EXPOSE 8080
 CMD ["/app"]
 ```
 
-## Ignore file
+## Docker ignore
 
 https://docs.docker.com/build/building/context/#dockerignore-files
 
