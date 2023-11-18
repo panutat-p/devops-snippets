@@ -16,7 +16,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app
+RUN GOOS=linux GOARCH=amd64 go build -o /app
 
 EXPOSE 8080
 CMD ["/app"]
@@ -32,10 +32,30 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 COPY *.go ./
-RUN CGO_ENABLED=0 GOOS=linux go build -o /app
+RUN GOOS=linux GOARCH=amd64 go build -o /app
 
 FROM alpine:3.18
 COPY --from=builder /app /app
 EXPOSE 8080
 CMD ["/app"]
+```
+
+## Ignore file
+
+https://docs.docker.com/build/building/context/#dockerignore-files
+
+`.dockerignore`
+```
+*.md
+*.log
+.git
+.aws
+*.env
+*.env.*
+.coverage
+.coverage.*
+.idea
+.vscode
+
+bin
 ```
