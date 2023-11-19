@@ -4,6 +4,7 @@
 ```bash
 export EDITOR=nano
 export KUBE_EDITOR=nano
+export PATH=$PATH:/usr/local/go/bin
 
 KUBECONFIG=~/.kube/config
 
