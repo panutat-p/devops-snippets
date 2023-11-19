@@ -39,7 +39,12 @@ Display network interface statistics
 netstat -ai
 ```
 
-Show network connections
+Show RAW, UDP, TCP, or UNIX connection sockets
 ```shell
 netstat -ant
+```
+
+To list services, their current state, and their corresponding ports
+```
+netstat -pnltu
 ```
