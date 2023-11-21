@@ -1,4 +1,14 @@
-# Processes
+# Linux Commands
+
+## User
+
+```shell
+sudo -i
+```
+
+```shell
+whoami
+```
 
 ## Kill a process
 
