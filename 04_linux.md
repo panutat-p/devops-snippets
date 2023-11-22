@@ -1,5 +1,27 @@
 # Linux Commands
 
+## System
+
+```shell
+lsb_release -a
+```
+
+```shell
+systemctl status nginx
+```
+
+```shell
+systemctl start nginx
+```
+
+```shell
+systemctl stop nginx
+```
+
+```shell
+systemctl restart  nginx
+```
+
 ## User
 
 ```shell
