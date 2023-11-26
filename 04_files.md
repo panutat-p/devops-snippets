@@ -26,3 +26,13 @@ Extract gzipped tar (explicit)
 ```shell
 tar -xvzf archive.tar.gz
 ```
+
+## zip
+
+```shell
+zip -r archive.zip directory
+```
+
+```shell
+unzip archive.zip
+```
