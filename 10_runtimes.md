@@ -5,7 +5,11 @@
 https://go.dev/dl
 
 ```shell
-curl -OL https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+rm -rf /usr/local/go
+```
+
+```shell
+wget -O go.tar.gz https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
 ```
 
 ```shell
