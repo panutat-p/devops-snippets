@@ -29,6 +29,11 @@ curl https://gorest.co.in/public/v2/users \
   -w '\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nAppCon time:\t%{time_appconnect}\nRedirect time:\t%{time_redirect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n'
 ```
 
+Download Go runtime
+```shell
+curl -OL https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+```
+
 ## RESTful API
 
 ```shell
