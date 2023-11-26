@@ -17,7 +17,12 @@ Extract
 tar -xvf archive.tar
 ```
 
-Extract gzipped tar
+Extract (automatically detect the compression type: gzip, bzip2, etc.)
+```shell
+tar -xvf archive.tar.gz
+```
+
+Extract gzipped tar (explicit)
 ```shell
 tar -xvzf archive.tar.gz
 ```
