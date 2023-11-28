@@ -27,3 +27,17 @@ echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 ## Install Python
 
 ## Install Java
+
+## TaskFile
+
+https://taskfile.dev/installation
+
+```shell
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+```
+
+https://taskfile.dev/installation/#setup-completions
+
+```shell
+wget -O .taskfile.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
+```
