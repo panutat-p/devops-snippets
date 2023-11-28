@@ -2,7 +2,7 @@
 
 ## Install Go
 
-https://go.dev/dl
+https://go.dev/doc/install
 
 ```shell
 rm -rf /usr/local/go
