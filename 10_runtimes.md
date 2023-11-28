@@ -13,7 +13,7 @@ wget -O go.tar.gz https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
 ```
 
 ```shell
-tar -C /usr/local -xvf go1.21.4.linux-amd64.tar.gz
+tar -C /usr/local -xvf go.tar.gz
 ```
 
 ```shell
