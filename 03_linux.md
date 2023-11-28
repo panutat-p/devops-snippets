@@ -1,5 +1,19 @@
 # Linux Commands
 
+## PATH
+
+```shell
+echo $PATH
+```
+
+```shell
+export PATH=$PATH:/usr/local/go/bin
+```
+
+```shell
+export PATH=$PATH:/usr/lib/jvm/java21/bin
+```
+
 ## System
 
 ```shell
