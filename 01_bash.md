@@ -2,10 +2,11 @@
 
 `~/.bashrc`
 ```bash
+source ~/.taskfile.bash
+
 export EDITOR=nano
 export KUBE_EDITOR=nano
 export PATH=$PATH:/usr/local/go/bin
-
 KUBECONFIG=~/.kube/config
 
 alias c='clear'
@@ -14,8 +15,7 @@ alias ll='ls -lF'
 alias gitlog='git log --graph --oneline --decorate'
 alias k='kubectl'
 alias d='docker'
-alias dc='docker-compose'
-alias dlist='docker container ls -a'
+alias dcl='docker container ls -a'
 alias dremove='docker rm $(docker ps -aq)'
 
 enc() {
