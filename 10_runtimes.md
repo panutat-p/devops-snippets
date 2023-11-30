@@ -22,6 +22,10 @@ export PATH=$PATH:/usr/local/go/bin
 
 ## Install Node.js
 
+```shell
+export PATH=$PATH:/usr/local/bin/node
+```
+
 ## Install bun
 
 ## Install Python
