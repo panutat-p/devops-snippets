@@ -24,6 +24,7 @@ export PATH=$PATH:/usr/local/go/bin
 
 ```shell
 export PATH=$PATH:/usr/local/bin/node
+export PATH=$PATH:/usr/local/bin/npm
 ```
 
 ## Install bun
