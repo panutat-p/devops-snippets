@@ -17,7 +17,7 @@ tar -C /usr/local -xvf go.tar.gz
 ```
 
 ```shell
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
+export PATH=$PATH:/usr/local/go/bin
 ```
 
 ## Install Node.js
