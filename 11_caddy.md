@@ -4,6 +4,29 @@
 
 https://caddyserver.com/docs/install#debian-ubuntu-raspbian
 
+## Config
+
+https://caddyserver.com/docs/getting-started
+
+https://caddyserver.com/docs/caddyfile
+
+`Caddyfile`
+```
+http://localhost:80
+
+respond "Hello, world!"
+```
+
+`Caddyfile`
+```
+:80 {
+    handle_path /api/* {
+        rewrite * /hello{path}
+        reverse_proxy http://kafka-ui.app.svc:8080
+    }
+}
+```
+
 ## Image
 
 https://hub.docker.com/_/caddy
@@ -32,7 +55,7 @@ services:
       - "443:443/udp"
     volumes:
       - type: bind
-        source: ~/caddy/Caddyfile
+        source: $PWD/Caddyfile
         target: /etc/caddy/Caddyfile
       - type: volume
         source: caddy_data
@@ -46,19 +69,4 @@ volumes:
     external: true
   caddy_config:
     external: false
-```
-
-## Config
-
-https://caddyserver.com/docs/getting-started
-
-https://caddyserver.com/docs/caddyfile
-
-```
-:80 {
-    handle_path /api/* {
-        rewrite * /hello{path}
-        reverse_proxy http://kafka-ui.app.svc:8080
-    }
-}
 ```
