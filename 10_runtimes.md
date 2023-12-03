@@ -43,7 +43,9 @@ apt update
 apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-## Install Go
+## Caddy
+
+## Go
 
 https://go.dev/doc/install
 
@@ -63,18 +65,18 @@ tar -C /usr/local -xvf go.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-## Install Node.js
+## Node.js
 
 ```shell
 export PATH=$PATH:/usr/local/bin/node
 export PATH=$PATH:/usr/local/bin/npm
 ```
 
-## Install bun
+## bun
 
-## Install Python
+## Python
 
-## Install Java
+## Java
 
 ## TaskFile
 
