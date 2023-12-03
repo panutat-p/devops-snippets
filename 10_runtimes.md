@@ -45,6 +45,28 @@ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-co
 
 ## Caddy
 
+https://caddyserver.com/docs/install
+
+```shell
+apt install -y debian-keyring debian-archive-keyring apt-transport-https
+```
+
+```shell
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+```
+
+```shell
+curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee /etc/apt/sources.list.d/caddy-stable.list
+```
+
+```shell
+apt update
+```
+
+```shell
+apt install caddy
+```
+
 ## Go
 
 https://go.dev/doc/install
