@@ -20,7 +20,7 @@ respond "Hello, world!"
 `Caddyfile`
 ```
 http://localhost:80 {
-	reverse_proxy http://localhost:4000
+  reverse_proxy http://localhost:4000
 }
 ```
 
@@ -31,18 +31,18 @@ http://localhost:80
 file_server browse
 
 handle / {
-	header Content-Type application/json
-	respond `{"message": "Caddy is running"}` 200
+  header Content-Type application/json
+  respond `{"message": "Caddy is running"}` 200
 }
 
 handle_path /web {
-	rewrite * /index
-	reverse_proxy http://localhost:4000
+  rewrite * /index
+  reverse_proxy http://localhost:4000
 }
 
 handle_path /web/* {
-	rewrite * /index{path}
-	reverse_proxy http://localhost:4000
+  rewrite * /index{path}
+  reverse_proxy http://localhost:4000
 }
 ```
 
