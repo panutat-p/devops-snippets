@@ -2,14 +2,10 @@
 
 ## Docker engine
 
-https://docs.docker.com/engine/install/ubuntu
+https://docs.docker.com/engine/install
 
 ```shell
-sudo -i
-```
-
-```shell
-for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt remove $pkg; done
+for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do apt remove $pkg; done
 ```
 
 ```shell
