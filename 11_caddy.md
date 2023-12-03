@@ -19,11 +19,30 @@ respond "Hello, world!"
 
 `Caddyfile`
 ```
-:80 {
-    handle_path /api/* {
-        rewrite * /hello{path}
-        reverse_proxy http://kafka-ui.app.svc:8080
-    }
+http://localhost:80 {
+	reverse_proxy http://localhost:4000
+}
+```
+
+`Caddyfile`
+```
+http://localhost:80
+
+file_server browse
+
+handle / {
+    header Content-Type application/json
+    respond `{"message": "Caddy is running"}` 200
+}
+
+handle_path /web {
+	rewrite * /index
+	reverse_proxy http://localhost:4000
+}
+
+handle_path /web/* {
+    rewrite * /index{path}
+    reverse_proxy http://localhost:4000
 }
 ```
 
