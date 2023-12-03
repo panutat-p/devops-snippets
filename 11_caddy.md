@@ -12,6 +12,10 @@ https://hub.docker.com/_/caddy
 mkdir ~/caddy && touch ~/caddy/Caddyfile
 ```
 
+```shel
+docker volume create caddy_config
+```
+
 `compose.yaml`
 ```yaml
 version: "3.9"
@@ -41,6 +45,7 @@ volumes:
   caddy_data:
     external: true
   caddy_config:
+    external: false
 ```
 
 ## Config
