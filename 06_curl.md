@@ -37,7 +37,8 @@ curl -i https://gorest.co.in/public/v2/users
 curl -L http://google.com
 ```
 
-Show response time
+## Write out
+
 ```
 curl https://gorest.co.in/public/v2/users \
   -s \
@@ -45,9 +46,14 @@ curl https://gorest.co.in/public/v2/users \
   -w '\nLookup time:\t%{time_namelookup}\nConnect time:\t%{time_connect}\nAppCon time:\t%{time_appconnect}\nRedirect time:\t%{time_redirect}\nPreXfer time:\t%{time_pretransfer}\nStartXfer time:\t%{time_starttransfer}\n\nTotal time:\t%{time_total}\n'
 ```
 
-Download Go runtime
+## Download
+
 ```shell
 curl -OL https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+```
+
+```shell
+curl -o go.tar.gz -L https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
 ```
 
 ## RESTful API
