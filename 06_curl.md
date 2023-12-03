@@ -4,19 +4,35 @@ https://quickref.me/curl.html
 
 https://gorest.co.in
 
+## Options
+
+* `-v` verbose
+* `-vv` very verbose
+
+* `-o arg` download and save to specified file name
+* `-O` download
+* `-w arg` display information on stdout
+
+* `-i` show response header
+* `-I` show only response header
+* `-s` hide progress bar
+* `-f` hide error
+* `-S` show error
+
+* `-1` force to use TLS version 1.X
+* `-L` follow redirection
+
+* `-X arg` specify a custom request method
+* `-H arg` include extra header
+* `-d arg` specify body
+
+
 ## Basic
 
-Show response header
 ```shell
 curl -i https://gorest.co.in/public/v2/users
 ```
 
-Show only response header
-```shell
-curl -I https://gorest.co.in/public/v2/users
-```
-
-Redirect
 ```shell
 curl -L http://google.com
 ```
