@@ -2,14 +2,6 @@
 
 https://github.com/provectus/kafka-ui/blob/master/documentation/compose/DOCKER_COMPOSE.md
 
-## Config
-
-https://docs.kafka-ui.provectus.io/configuration/configuration-file
-
-```shell
-touch kafka-ui.yaml
-```
-
 ## Docker network (internal only)
 
 `compose.yaml`
@@ -42,8 +34,6 @@ services:
       DYNAMIC_CONFIG_ENABLED: 'true'
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:9092
-    volumes:
-      - $PWD/kafka-ui.yaml:/etc/kafkaui/dynamic_config.yaml
 ```
 
 ## External
@@ -81,6 +71,4 @@ services:
       DYNAMIC_CONFIG_ENABLED: 'true'
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:29092
-    volumes:
-      - $PWD/kafka-ui.yaml:/etc/kafkaui/dynamic_config.yaml
 ```
