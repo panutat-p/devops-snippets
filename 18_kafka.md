@@ -7,7 +7,7 @@ https://github.com/provectus/kafka-ui/blob/master/documentation/compose/DOCKER_C
 https://docs.kafka-ui.provectus.io/configuration/configuration-file
 
 ```shell
-touch ~/kafka/kafka-ui/config.yaml
+touch kafka-ui.yaml
 ```
 
 ## Docker network (internal only)
@@ -45,7 +45,7 @@ services:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:9092
     volumes:
-      - ~/kafka/kafka-ui/config.yaml:/etc/kafkaui/dynamic_config.yaml
+      - $PWD/kafka-ui.yaml:/etc/kafkaui/dynamic_config.yaml
 ```
 
 ## External
@@ -84,5 +84,5 @@ services:
       KAFKA_CLUSTERS_0_NAME: local
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:29092
     volumes:
-      - ~/kafka/kafka-ui/config.yaml:/etc/kafkaui/dynamic_config.yaml
+      - $PWD/kafka-ui.yaml:/etc/kafkaui/dynamic_config.yaml
 ```
