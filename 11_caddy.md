@@ -55,7 +55,7 @@ mkdir ~/caddy && touch ~/caddy/Caddyfile
 ```
 
 ```shel
-docker volume create caddy_config
+docker volume create caddy_data
 ```
 
 `compose.yaml`
