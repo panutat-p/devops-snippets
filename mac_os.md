@@ -1,11 +1,5 @@
 # Mac OS
 
-https://docs.docker.com/compose/install/linux/#install-the-plugin-manually
-
-https://github.com/abiosoft/colima/discussions/273#discussioncomment-4959736
-
-https://github.com/docker/compose/issues/8630#issuecomment-1169537632
-
 ## Colima
 
 ```shell
@@ -34,40 +28,28 @@ colima delete
 brew install docker
 ```
 
-```shell
-brew install docker-buildx
-```
+## Docker plugins
 
-```shell
-brew install docker-compose
-```
+https://github.com/abiosoft/colima/discussions/273#discussioncomment-4959736
 
 ```shell
 mkdir -p ~/.docker/cli-plugins
 ```
 
 ```shell
-curl -SL \
-  -o ~/.docker/cli-plugins/docker-compose \
-  https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-linux-x86_64
+brew install docker-buildx
 ```
 
 ```shell
-chmod +x ~/.docker/cli-plugins/docker-compose
+ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
+```
+
+https://github.com/docker/compose/issues/8630#issuecomment-1169537632
+
+```shell
+brew install docker-compose
 ```
 
 ```shell
 ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
-```
-
-```shell
-docker version
-```
-
-```shell
-docker buildx version
-```
-
-```shell
-docker compose version
 ```
