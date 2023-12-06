@@ -1,5 +1,7 @@
 # Caddy
 
+https://hub.docker.com/_/caddy
+
 ## Install
 
 https://caddyserver.com/docs/install#debian-ubuntu-raspbian
@@ -46,50 +48,6 @@ handle_path /web/* {
 }
 ```
 
-## Image
-
-https://hub.docker.com/_/caddy
-
-```shell
-mkdir ~/caddy && touch ~/caddy/Caddyfile
-```
-
-```shel
-docker volume create caddy_data
-```
-
-`compose.yaml`
-```yaml
-version: "3.9"
-
-services:
-  caddy:
-    image: caddy:2.7
-    restart: unless-stopped
-    cap_add:
-      - NET_ADMIN
-    ports:
-      - "80:80"
-      - "443:443"
-      - "443:443/udp"
-    volumes:
-      - type: bind
-        source: $PWD/Caddyfile
-        target: /etc/caddy/Caddyfile
-      - type: volume
-        source: caddy_data
-        target: /data
-      - type: volume
-        source: caddy_config
-        target: /config
-
-volumes:
-  caddy_data:
-    external: true
-  caddy_config:
-    external: false
-```
-
 ## Reverse proxy for Kafka UI
 
 `Caddyfile`
@@ -97,6 +55,10 @@ volumes:
 http://localhost:80 {
   reverse_proxy http://kafka-ui:8080
 }
+```
+
+```shel
+docker volume create caddy_data
 ```
 
 ```yaml
