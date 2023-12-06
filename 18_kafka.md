@@ -73,6 +73,57 @@ services:
       KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS: kafka0:29092
 ```
 
+## Spring config
+
+`kafka-ui.yaml`
+```yaml
+server:
+  port: 80
+  servlet:
+    contextPath: /ui
+
+kafka:
+  clusters:
+    - name: local
+      bootstrapServers: kafka0:9092
+```
+
+`compose.yaml`
+```yaml
+version: '3.9'
+
+services:
+  kafka0:
+    hostname: kafka0
+    container_name: kafka0
+    image: 'bitnami/kafka:3.6'
+    environment:
+      KAFKA_ENABLE_KRAFT: yes
+      KAFKA_CFG_NODE_ID: 0
+      KAFKA_CFG_PROCESS_ROLES: controller,broker
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka0:9092
+      KAFKA_CFG_LISTENERS: CONTROLLER://kafka0:9093,PLAINTEXT://kafka0:9092
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 0@kafka0:9093
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
+    restart: always
+  kafka-ui:
+    hostname: kafka-ui
+    container_name: kafka-ui
+    depends_on:
+      - kafka0
+    image: 'provectuslabs/kafka-ui:latest'
+    ports:
+      - '80:80'
+      - '8080:8080'
+    environment:
+      SPRING_CONFIG_ADDITIONAL-LOCATION: /etc/kafkaui/config.yaml
+    volumes:
+      - type: bind
+        source: $PWD/kafka-ui.yaml
+        target: /etc/kafkaui/config.yaml
+```
+
 ## Expose only Caddy
 
 `Caddyfile`
