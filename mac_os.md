@@ -47,9 +47,9 @@ mkdir -p ~/.docker/cli-plugins
 ```
 
 ```shell
-curl \
-  -SL https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-linux-x86_64 \
-  -o ~/.docker/cli-plugins/docker-compose
+curl -SL \
+  -o ~/.docker/cli-plugins/docker-compose \
+  https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-linux-x86_64
 ```
 
 ```shell
