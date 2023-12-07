@@ -15,7 +15,7 @@ keytool -import -file cert.pem -alias alias -keystore truststore.jks
 ```
 
 ```shell
-kubectl create configmap ssl-files --from-file=truststore.jks --dry-run=client -o yaml > cm-ssl.yaml
+kubectl create configmap ssl-files --from-file=truststore.jks -o yaml --dry-run=client > cm-ssl.yaml
 ```
 
 ## Kubernetes
