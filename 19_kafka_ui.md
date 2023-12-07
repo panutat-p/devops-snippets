@@ -58,7 +58,7 @@ data:
 
     kafka:
       clusters:
-        - name: glo-non-prod
+        - name: dev-kafka
           bootstrapServers: host1:9092,host2:9092,host3:9092
           properties:
             security.protocol: SASL_SSL
