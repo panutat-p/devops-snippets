@@ -4,6 +4,22 @@ https://docs.kafka-ui.provectus.io
 
 https://hub.docker.com/r/provectuslabs/kafka-ui
 
+## JKS Keystore
+
+```shell
+touch cert.pem
+```
+
+```shell
+keytool -import -file cert.pem -alias alias -keystore truststore.jks
+```
+
+```shell
+kubectl create configmap ssl-files --from-file=truststore.jks --dry-run=client -o yaml > cm-ssl.yaml
+```
+
+## Kubernetes
+
 ```yaml
 apiVersion: v1
 kind: ConfigMap
