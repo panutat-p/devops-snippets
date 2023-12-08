@@ -1,5 +1,12 @@
 # wget
 
+## options
+
+* `-q` hide wget info
+* `-O arg` specify output
+* `-t arg` set number of retries
+* `-m` mirror
+
 ```shell
 apt install wget
 ```
@@ -10,14 +17,21 @@ wget http://go.dev \
   -O home.html
 ```
 
-Show HTML in std out
+Show Output in stdout
 ```shell
-wget http://go.dev \
-  -O -
+wget -O - https://example.com
 ```
 
-Download Go runtime
 ```shell
-wget https://go.dev/dl/go1.21.4.linux-amd64.tar.gz \
-  -O go.tar.gz
+wget -q -O /dev/stdout https://example.com
+```
+
+Download file
+```shell
+wget -O go.tar.gz https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+```
+
+Download mirror of a website
+```shell
+wget -m https://example.com
 ```
