@@ -1,6 +1,6 @@
 # wget
 
-## options
+## Options
 
 * `-q` hide wget info
 * `-O arg` specify output
