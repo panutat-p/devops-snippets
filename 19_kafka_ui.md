@@ -6,14 +6,13 @@ https://hub.docker.com/r/provectuslabs/kafka-ui
 
 ## DOCKER COMPOSE
 
-* Expose Kafka UI
-* USE SPRING CONFIG
-* NOT EXPOSE KAFKA PORT
+* Expose Kafka UI on port `8080`
+* Not Expose Kafka
 
 `kafka-ui.yaml`
 ```yaml
 server:
-  port: 80
+  port: 8080
   servlet:
     contextPath: /ui
 
@@ -49,7 +48,6 @@ services:
       - kafka0
     image: 'provectuslabs/kafka-ui:latest'
     ports:
-      - '80:80'
       - '8080:8080'
     environment:
       SPRING_CONFIG_ADDITIONAL-LOCATION: /etc/kafkaui/config.yaml
@@ -61,9 +59,10 @@ services:
 
 ## Kubernetes
 
-* CONFIG MAP: JKS Keystore
-* POD
-* SERVICE
+* ConfigMap: JKS truststore
+* ConfigMap: app config YAML file
+* Pod expose port `8080`
+* Service map port `80` to port `8080`
 
 ```shell
 touch cert.pem
