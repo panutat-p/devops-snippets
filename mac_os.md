@@ -16,7 +16,7 @@ colima start --cpu 4 --memory 8 --very-verbose
 ```
 
 ```shell
-colima status
+colima status --very-verbose
 ```
 
 ```shell
