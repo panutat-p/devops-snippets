@@ -6,8 +6,13 @@
 brew install colima
 ```
 
+List available CPUs
 ```shell
-colima start --cpu-type qemu64 --cpu 4 --memory 8 --very-verbose
+qemu-system-aarch64 -cpu help
+```
+
+```shell
+colima start --cpu 4 --memory 8 --very-verbose
 ```
 
 ```shell
