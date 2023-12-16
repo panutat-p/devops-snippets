@@ -90,6 +90,22 @@ export PATH=$PATH:/usr/local/bin/node
 export PATH=$PATH:/usr/local/bin/npm
 ```
 
+```shell
+npm i -g prettier
+```
+
+```shell
+npm i -g husky
+```
+
+```shell
+npm i -g @commitlint/cli @commitlint/config-conventional
+```
+
+```shell
+npm list -g --depth=0
+```
+
 ## bun
 
 ## Python
