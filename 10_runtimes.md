@@ -105,18 +105,7 @@ apt install -y nodejs
 ```
 
 ```shell
-apt update
-apt install -y nodejs
-```
-
-```shell
 npm i -g npm@latest
-```
-
-Optional
-```shell
-export PATH=$PATH:/usr/local/bin/node
-export PATH=$PATH:/usr/local/bin/npm
 ```
 
 ```shell
@@ -133,6 +122,12 @@ npm i -g @commitlint/cli @commitlint/config-conventional
 
 ```shell
 npm list -g --depth=0
+```
+
+Manually source PATH
+```shell
+export PATH=$PATH:/usr/local/bin/node
+export PATH=$PATH:/usr/local/bin/npm
 ```
 
 ## bun
