@@ -17,6 +17,7 @@ services:
     environment:
       xpack.security.enabled: false
       xpack.security.http.ssl.enabled: false
+      xpack.security.transport.ssl.enabled: false
       ELASTIC_USERNAME: admin
       ELASTIC_PASSWORD: 1234
     ports:
