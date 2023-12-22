@@ -1,6 +1,6 @@
 # Elasticsearch
 
-https://hub.docker.com/r/elastic/elasticsearch
+https://www.docker.elastic.co/r/elasticsearch
 
 ## Docker Compose
 
