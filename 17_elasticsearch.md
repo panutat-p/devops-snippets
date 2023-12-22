@@ -15,18 +15,30 @@ version: '3.9'
 
 services:
   elasticsearch:
-    image: 'elastic/elasticsearch:8.11.3'
+#    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.17.16'
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:8.11.3'
     environment:
-      xpack.security.enabled: false
-      xpack.security.http.ssl.enabled: false
-      xpack.security.transport.ssl.enabled: false
-      ELASTIC_USERNAME: admin
-      ELASTIC_PASSWORD: 1234
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+      - xpack.security.transport.ssl.enabled=false
+      - ELASTIC_USERNAME=admin
+      - ELASTIC_PASSWORD="1234"
     ports:
       - '9200:9200'
-    restart: always
+    restart: unless-stopped
+  kibana:
+    depends_on:
+      - elasticsearch
+#    image: 'docker.elastic.co/kibana/kibana:7.17.16'
+    image: 'docker.elastic.co/kibana/kibana:8.11.3'
+    ports:
+      - '5601:5601'
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+      - ELASTICSEARCH_USERNAME=admin
+      - ELASTICSEARCH_PASSWORD="1234"
+    restart: unless-stopped
 ```
-
 
 ## Kibana UI
 
