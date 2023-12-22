@@ -24,3 +24,57 @@ services:
       - '9200:9200'
     restart: always
 ```
+
+
+## Kibana UI
+
+```json
+GET /
+```
+
+```json
+GET /_cat/indices
+```
+
+```json
+PUT /fruit
+{
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "text"
+      },
+      "price": {
+        "type": "integer"
+      }
+    }
+  }
+}
+```
+
+```json
+PUT /fruit/_mapping
+{
+  "properties": {
+    "tag": {
+      "type": "keyword"
+    }
+  }
+}
+```
+
+```json
+POST /fruit/_doc
+{
+  "name": "apple",
+  "price": 10
+}
+```
+
+```json
+GET /fruit/_count
+```
+
+```json
+DELETE /fruit
+```
