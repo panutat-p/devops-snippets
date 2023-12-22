@@ -96,5 +96,31 @@ GET /fruit/_count
 ```
 
 ```shell
+GET /fruit/_search?filter_path=hits.hits._source
+```
+
+```shell
+GET /fruit/_search
+{
+  "query": {
+    "match": {
+      "name": "apple"
+    }
+  }
+}
+```
+
+```shell
+GET /fruit/_search
+{
+  "query": {
+    "match": {
+      "price": 10
+    }
+  }
+}
+```
+
+```shell
 DELETE /fruit
 ```
