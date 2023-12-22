@@ -28,15 +28,15 @@ services:
 
 ## Kibana UI
 
-```json
+```shell
 GET /
 ```
 
-```json
+```shell
 GET /_cat/indices
 ```
 
-```json
+```shell
 PUT /fruit
 {
   "mappings": {
@@ -52,7 +52,7 @@ PUT /fruit
 }
 ```
 
-```json
+```shell
 PUT /fruit/_mapping
 {
   "properties": {
@@ -63,7 +63,7 @@ PUT /fruit/_mapping
 }
 ```
 
-```json
+```shell
 POST /fruit/_doc
 {
   "name": "pineapple",
@@ -71,7 +71,7 @@ POST /fruit/_doc
 }
 ```
 
-```json
+```shell
 POST /fruit/_bulk
 { "index" : { "_id" : "1" } }
 { "name" : "apple", "price" : 10 }
@@ -83,7 +83,7 @@ POST /fruit/_bulk
 { "name" : "durian", "price" : 100 }
 ```
 
-```json
+```shell
 POST /fruit/_bulk
   { "update" : {"_id" : 1 }}
   { "doc" : {"price" : 15}}
@@ -91,10 +91,10 @@ POST /fruit/_bulk
   { "doc" : {"price" : 8}}
 ```
 
-```json
+```shell
 GET /fruit/_count
 ```
 
-```json
+```shell
 DELETE /fruit
 ```
