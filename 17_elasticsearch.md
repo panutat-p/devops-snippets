@@ -66,9 +66,29 @@ PUT /fruit/_mapping
 ```json
 POST /fruit/_doc
 {
-  "name": "apple",
-  "price": 10
+  "name": "pineapple",
+  "price": 25
 }
+```
+
+```json
+POST /fruit/_bulk
+{ "index" : { "_id" : "1" } }
+{ "name" : "apple", "price" : 10 }
+{ "index" : { "_id" : "2" } }
+{ "name" : "banana", "price" : 10 }
+{ "index" : { "_id" : "3" } }
+{ "name" : "carrot", "price" : 6 }
+{ "index" : { "_id" : "4" } }
+{ "name" : "durian", "price" : 100 }
+```
+
+```json
+POST /fruit/_bulk
+  { "update" : {"_id" : 1 }}
+  { "doc" : {"price" : 15}}
+  { "update" : {"_id" : 2 }}
+  { "doc" : {"price" : 8}}
 ```
 
 ```json
