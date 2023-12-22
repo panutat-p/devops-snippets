@@ -2,6 +2,8 @@
 
 https://www.docker.elastic.co/r/elasticsearch
 
+https://www.docker.elastic.co/r/kibana
+
 ## Docker Compose
 
 https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
