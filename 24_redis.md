@@ -46,7 +46,7 @@ version: '3.9'
 services:
   redis:
     image: redis:7
-    command: redis-server /data/redis.conf
+    command: redis-server /usr/local/etc/redis/redis.conf
     ports:
       - '6379:6379'
     volumes:
@@ -55,7 +55,7 @@ services:
         target: /data
       - type: bind
         source: redis.conf
-        target: /data/redis.conf
+        target: /usr/local/etc/redis/redis.conf
     restart: unless-stopped
 
 volumes:
