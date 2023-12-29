@@ -4,6 +4,10 @@ https://hub.docker.com/_/redis
 
 https://redis.io/docs/management/persistence
 
+```shell
+docker volume create redis_data
+```
+
 ## Enable only RDB
 
 `compose.yaml`
