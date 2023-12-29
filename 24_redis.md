@@ -20,6 +20,10 @@ services:
         source: redis_data
         target: /data
     restart: unless-stopped
+
+volumes:
+  redis_data:
+    external: true
 ```
 
 ## Enalbe both RDB and AOF
