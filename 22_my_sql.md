@@ -9,7 +9,7 @@ services:
   mysql:
     image: mysql:8
     ports:
-      - '80:80'
+      - '3306:3306'
     environment:
       MYSQL_ROOT_PASSWORD: 1234
       MYSQL_DATABASE: fruits
