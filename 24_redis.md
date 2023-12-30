@@ -30,7 +30,7 @@ volumes:
     external: true
 ```
 
-## Enalbe both RDB and AOF
+## Enable both RDB and AOF
 
 `redis.conf`
 ```
