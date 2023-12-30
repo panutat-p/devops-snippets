@@ -15,7 +15,6 @@ version: '3.9'
 
 services:
   elasticsearch:
-#    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.17.16'
     image: 'docker.elastic.co/elasticsearch/elasticsearch:8.11.3'
     environment:
       - discovery.type=single-node
@@ -29,7 +28,6 @@ services:
   kibana:
     depends_on:
       - elasticsearch
-#    image: 'docker.elastic.co/kibana/kibana:7.17.16'
     image: 'docker.elastic.co/kibana/kibana:8.11.3'
     ports:
       - '5601:5601'
@@ -75,7 +73,9 @@ services:
       - ELASTICSEARCH_USERNAME=admin
       - ELASTICSEARCH_PASSWORD="1234"
     volumes:
-      - kibana_data:/usr/share/kibana/data
+      - type: volume
+        source: kibana_data
+        target: /usr/share/kibana/data
     restart: unless-stopped
 
 volumes:
@@ -85,10 +85,9 @@ volumes:
     driver: local
   kibana_data:
     driver: local
-
 ```
 
-## Kibana UI
+## Kibana dev tools
 
 ```shell
 GET /
