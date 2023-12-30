@@ -1,54 +1,20 @@
 # Elasticsearch
 
+[official guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html)
+
 https://www.docker.elastic.co/r/elasticsearch
 
 https://www.docker.elastic.co/r/kibana
 
-## Docker Compose
+[Compose example](https://github.com/elastic/elasticsearch/blob/8.11/docs/reference/setup/install/docker/docker-compose.yml)
 
-https://www.elastic.co/guide/en/elasticsearch/reference/current/docker.html
-
-https://github.com/elastic/elasticsearch/blob/8.11/docs/reference/setup/install/docker/docker-compose.yml
+## Elasticsearch + Kibana
 
 ```yaml
 version: '3.9'
 
 services:
   elasticsearch:
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:8.11.3'
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-      - xpack.security.transport.ssl.enabled=false
-      - ELASTIC_USERNAME=admin
-      - ELASTIC_PASSWORD="1234"
-    ports:
-      - '9200:9200'
-    restart: unless-stopped
-  kibana:
-    depends_on:
-      - elasticsearch
-    image: 'docker.elastic.co/kibana/kibana:8.11.3'
-    ports:
-      - '5601:5601'
-    environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-      - ELASTICSEARCH_USERNAME=admin
-      - ELASTICSEARCH_PASSWORD="1234"
-    restart: unless-stopped
-```
-
-```yaml
-version: '3.9'
-
-services:
-  redis:
-    image: 'redis:7'
-    ports:
-      - '6379:6379'
-    restart: unless-stopped
-  elasticsearch:
-#    image: 'docker.elastic.co/elasticsearch/elasticsearch:7.17.16'
     image: 'docker.elastic.co/elasticsearch/elasticsearch:8.11.3'
     environment:
       - discovery.type=single-node
@@ -59,12 +25,13 @@ services:
     ports:
       - '9200:9200'
     volumes:
-      - elasticsearch_data:/usr/share/elasticsearch/data
+      - type: volume
+        source: elasticsearch_data
+        target: /usr/share/elasticsearch/data
     restart: unless-stopped
   kibana:
     depends_on:
       - elasticsearch
-#    image: 'docker.elastic.co/kibana/kibana:7.17.16'
     image: 'docker.elastic.co/kibana/kibana:8.11.3'
     ports:
       - '5601:5601'
