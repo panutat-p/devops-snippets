@@ -8,6 +8,23 @@ apt install net-tools
 netstat --version
 ```
 
+## ip
+
+Show all network interfaces
+```shell
+ip a
+```
+
+Show a specific network interface
+```shell
+ip a show eth0
+```
+
+Show the routing table
+```shell
+ip r
+```
+
 ## Port number
 
 https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux
