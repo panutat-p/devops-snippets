@@ -10,14 +10,19 @@ netstat --version
 
 ## ip
 
-Show all network interfaces
+Show all network interfaces IP address
 ```shell
 ip a
 ```
 
-Show a specific network interface
+Show a specific network interface IP address
 ```shell
 ip a show eth0
+```
+
+Show all network interface MAC address
+```shell
+ip link show
 ```
 
 Show the routing table
