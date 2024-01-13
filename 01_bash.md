@@ -2,16 +2,16 @@
 
 `~/.bashrc`
 ```bash
-source ~/.taskfile.bash
+# shell variables
 
-KUBECONFIG=~/.kube/config
-
+# ENV variables
 export EDITOR=nano
+export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
 export KUBE_EDITOR=nano
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
+# aliases, a full list of active aliases, run `alias`.
 alias l='ls -laF'
 alias ll='ls -lF'
 alias gitlog='git log --graph --oneline --decorate'
@@ -19,8 +19,12 @@ alias k='kubectl'
 alias kcontext='kubectl config get-contexts'
 alias d='docker'
 alias dcl='docker container ls -a'
-alias dremove='docker rm $(docker ps -aq)'
+alias dcr='docker rm -f $(docker ps -aq)'
 
+# sources
+source ~/.taskfile.bash
+
+# functions
 enc() {
   echo -n "$1" | base64
   echo
@@ -51,19 +55,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 https://github.com/zsh-users/zsh-autosuggestions
 
 `.zshrc`
-export ZSH="$HOME/.oh-my-zsh"
-
+```shell
 ZSH_THEME="robbyrussell"
 
-```shell
 plugins=( 
     git
     zsh-autosuggestions
 )
 
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-if [ -f '/Users/pnt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/path.zsh.inc'; fi
-if [ -f '/Users/pnt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/completion.zsh.inc'; fi
+export ZSH="$HOME/.oh-my-zsh"
 
 source $ZSH/oh-my-zsh.sh
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+# Updates PATH for the Google Cloud SDK.
+if [ -f '/Users/pnt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/path.zsh.inc'; fi
+# Enables shell command completion for gcloud.
+if [ -f '/Users/pnt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/completion.zsh.inc'; fi
 ```
