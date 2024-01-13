@@ -4,12 +4,14 @@
 ```bash
 source ~/.taskfile.bash
 
+KUBECONFIG=~/.kube/config
+
 export EDITOR=nano
 export KUBE_EDITOR=nano
 export PATH=$PATH:/usr/local/go/bin
-KUBECONFIG=~/.kube/config
+export PATH=$PATH:~/go/bin
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
-alias c='clear'
 alias l='ls -laF'
 alias ll='ls -lF'
 alias gitlog='git log --graph --oneline --decorate'
@@ -36,4 +38,32 @@ kn() {
 kx() {
   [ "$1" ] && kubectl config use-context $1 || kubectl config current-context
 }
+```
+
+## OH MY ZSH
+
+https://ohmyz.sh/#install
+
+```shell
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+https://github.com/zsh-users/zsh-autosuggestions
+
+`.zshrc`
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="robbyrussell"
+
+```shell
+plugins=( 
+    git
+    zsh-autosuggestions
+)
+
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
+if [ -f '/Users/pnt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/pnt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/completion.zsh.inc'; fi
+
+source $ZSH/oh-my-zsh.sh
 ```
