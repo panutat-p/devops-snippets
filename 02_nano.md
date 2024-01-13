@@ -6,14 +6,6 @@ https://bash-prompt.net/guides/nanorc-settings
 apt install nano
 ```
 
-```shell
-apk add nano
-```
-
-```shell
-yum install nano
-```
-
 ## Nano highlight
 
 https://github.com/serialhex/nano-highlight#nano-highlight
