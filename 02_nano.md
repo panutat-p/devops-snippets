@@ -37,12 +37,12 @@ set tabstospaces
 set autoindent
 set mouse
 
-bind ^a redo main
+bind ^a mark main
+bind ^r redo main
 bind ^z undo main
 bind ^x cut main
 bind ^c copy main
 bind ^v paste main
 bind ^f whereis main
 bind ^g wherewas main
-bind ^b mark main
 ```
