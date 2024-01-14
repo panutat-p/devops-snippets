@@ -1,14 +1,5 @@
 # Tools
 
-## Lazy Docker
-
-https://github.com/jesseduffield/lazydocker
-
-```shell
-brew install jesseduffield/lazydocker/lazydocker
-brew install lazydocker
-```
-
 ## Redis CLI
 
 ```shell
