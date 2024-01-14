@@ -94,7 +94,7 @@ git checkout -b feat/v1 revision_hash f668219
 
 Discard uncommitted local changes
 ```shell
-git restore
+git restore .
 ```
 
 Delete uncommitted files
