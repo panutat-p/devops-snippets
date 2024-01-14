@@ -58,3 +58,13 @@ brew install docker-compose
 ```shell
 ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ```
+
+## Lazy Docker
+
+https://github.com/jesseduffield/lazydocker
+
+```shell
+brew install jesseduffield/lazydocker/lazydocker
+brew install lazydocker
+```
+
