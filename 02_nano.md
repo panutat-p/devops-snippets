@@ -27,7 +27,6 @@ set zap
 set tabsize 2
 set tabstospaces
 set autoindent
-set mouse
 
 bind ^a mark main
 bind ^r redo main
