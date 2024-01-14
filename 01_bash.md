@@ -43,32 +43,3 @@ kx() {
   [ "$1" ] && kubectl config use-context $1 || kubectl config current-context
 }
 ```
-
-## OH MY ZSH
-
-https://ohmyz.sh/#install
-
-```shell
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-https://github.com/zsh-users/zsh-autosuggestions
-
-`.zshrc`
-```shell
-ZSH_THEME="robbyrussell"
-
-plugins=( 
-    git
-    zsh-autosuggestions
-)
-
-export ZSH="$HOME/.oh-my-zsh"
-
-source $ZSH/oh-my-zsh.sh
-[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
-# Updates PATH for the Google Cloud SDK.
-if [ -f '/Users/pnt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/path.zsh.inc'; fi
-# Enables shell command completion for gcloud.
-if [ -f '/Users/pnt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/completion.zsh.inc'; fi
-```
