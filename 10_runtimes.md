@@ -72,7 +72,7 @@ rm -rf /usr/local/go
 ```
 
 ```shell
-wget -O go.tar.gz https://go.dev/dl/go1.21.5.linux-amd64.tar.gz
+wget -O go.tar.gz https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
 ```
 
 ```shell
