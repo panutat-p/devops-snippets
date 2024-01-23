@@ -113,10 +113,10 @@ POST /fruit/_bulk
 
 ```shell
 POST /fruit/_bulk
-  { "update" : {"_id" : 1 }}
-  { "doc" : {"price" : 15}}
-  { "update" : {"_id" : 2 }}
-  { "doc" : {"price" : 8}}
+{ "update" : {"_id" : 1 }}
+{ "doc" : {"price" : 15}}
+{ "update" : {"_id" : 2 }}
+{ "doc" : {"price" : 8}}
 ```
 
 ```shell
