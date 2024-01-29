@@ -18,6 +18,20 @@ apt install -y net-tools
 apt install -y jq
 ```
 
+## TaskFile
+
+https://taskfile.dev/installation
+
+```shell
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+```
+
+https://taskfile.dev/installation/#setup-completions
+
+```shell
+wget -O .taskfile.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
+```
+
 ## Redis
 
 https://redis.io/docs/install/install-redis/install-redis-on-linux
