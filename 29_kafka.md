@@ -22,7 +22,7 @@ services:
       KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
       KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 0@kafka0:9093
       KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
-    restart: always
+    restart: unless-stopped
   kafka-ui:
     depends_on:
       - kafka0
@@ -59,7 +59,7 @@ services:
       KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 0@kafka0:29093
       KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER
       KAFKA_CFG_INTER_BROKER_LISTENER_NAME: INTERNAL
-    restart: always
+    restart: unless-stopped
   kafka-ui:
     depends_on:
       - kafka0
