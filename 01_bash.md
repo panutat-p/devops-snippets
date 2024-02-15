@@ -44,10 +44,10 @@ kx() {
 }
 
 kconfig() {
-    kubectl get cm $1 -o yaml
+  kubectl get cm $1 -o yaml | yq e '.data' -
 }
 
 ksecret() {
-    kubectl get secret $1 -o json | jq -r '.data | to_entries[] | .key + ": " + (.value | @base64d)'
+  kubectl get secret $1 -o json | jq -r '.data | to_entries[] | .key + ": " + (.value | @base64d)'
 }
 ```
