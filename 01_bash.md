@@ -42,4 +42,12 @@ kn() {
 kx() {
   [ "$1" ] && kubectl config use-context $1 || kubectl config current-context
 }
+
+kconfig() {
+    kubectl get cm $1 -o yaml
+}
+
+ksecret() {
+    kubectl get secret $1 -o json | jq -r '.data | to_entries[] | .key + ": " + (.value | @base64d)'
+}
 ```
