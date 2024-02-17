@@ -22,7 +22,7 @@ gcloud init
 
 ## Identity and Access Management (IAM)
 
-https://cloud.google.com/sdk/gcloud/reference/auth/login
+https://cloud.google.com/docs/authentication/gcloud
 
 ```sh
 gcloud auth login
@@ -30,6 +30,10 @@ gcloud auth login
 
 ```sh
 gcloud auth list
+```
+
+```sh
+gcloud auth application-default login
 ```
 
 ## GKE
