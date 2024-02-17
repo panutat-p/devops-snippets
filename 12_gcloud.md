@@ -16,13 +16,19 @@ tar -C $HOME -xvf gcloud.tar.gz
 $HOME/gcloud.tar.gz
 ```
 
-## Auth
+```sh
+gcloud init
+```
 
-```shell
+## Identity and Access Management (IAM)
+
+https://cloud.google.com/sdk/gcloud/reference/auth/login
+
+```sh
 gcloud auth login
 ```
 
-```shell
+```sh
 gcloud auth list
 ```
 
@@ -30,18 +36,18 @@ gcloud auth list
 
 https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl
 
-```shell
+```sh
 gcloud components install gke-gcloud-auth-plugin
 ```
 
-```shell
-gcloud container clusters get-credentials gke-cluster-name --region asia-southeast1 --project project-name
+```sh
+gcloud container clusters get-credentials gke_cluster_name --region region_name --project project_name
 ```
 
-```shell
+```sh
 kubectl config get-contexts
 ```
 
-```shell
-kubectl config use-context gke-cluster-name
+```sh
+kubectl config use-context gke_cluster_name
 ```
