@@ -2,8 +2,8 @@
 
 ## Basic
 
-```shell
-apt install -y lsb-release curl gpg
+```sh
+apt install -y lsb-release gpg curl wget git
 ```
 
 ## Network
@@ -12,10 +12,10 @@ apt install -y lsb-release curl gpg
 apt install -y net-tools
 ```
 
-## JSON
+## Utilities
 
-```shell
-apt install -y jq
+```sh
+apt install -y jq yq
 ```
 
 ## TaskFile
