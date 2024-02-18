@@ -7,10 +7,6 @@
 * `-t arg` set number of retries
 * `-m` mirror
 
-```shell
-apt install wget
-```
-
 Save a web page
 ```shell
 wget http://go.dev \

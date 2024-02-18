@@ -6,10 +6,12 @@
 
 # ENV variables
 export EDITOR=nano
-export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
 export KUBE_EDITOR=nano
-export PATH=$PATH:$(go env GOPATH)/bin
+export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# PATH
+export PATH=$PATH:/usr/local/go/bin
 
 # aliases, a full list of active aliases, run `alias`.
 alias l='ls -laF'

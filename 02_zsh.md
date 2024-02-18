@@ -1,5 +1,9 @@
 # Mac OS
 
+```zsh
+export PATH=$PATH:$(go env GOPATH)/bin
+```
+
 ## OH MY ZSH
 
 https://ohmyz.sh/#install
