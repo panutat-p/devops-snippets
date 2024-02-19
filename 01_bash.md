@@ -25,6 +25,8 @@ alias dcr='docker rm -f $(docker ps -aq)'
 
 # sources
 source ~/.taskfile.bash
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
 
 # functions
 enc() {
