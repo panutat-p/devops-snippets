@@ -22,10 +22,14 @@ kubectl exec pod/curl -- curl https://example.com
 
 ## Files
 
-```sh
+### Upload
 
+```sh
+kubectl cp $HOME/script default/ubuntu:/root/script
 ```
 
-```sh
+## Download
 
+```sh
+kubectl cp default/ubuntu:/root/script $HOME/script
 ```
