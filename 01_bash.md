@@ -9,6 +9,7 @@ export EDITOR=nano
 export KUBE_EDITOR=nano
 export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+export CLOUDSDK_PYTHON=python3.11
 
 # PATH
 export PATH=$PATH:/usr/local/go/bin
