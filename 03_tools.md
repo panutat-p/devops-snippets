@@ -3,7 +3,7 @@
 ## Basic
 
 ```sh
-apt install -y lsb-release gpg curl wget git
+apt install -y bash-completion lsb-release gpg curl wget git
 ```
 
 ## Network
