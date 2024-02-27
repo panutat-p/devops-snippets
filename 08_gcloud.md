@@ -20,6 +20,10 @@ $HOME/gcloud.tar.gz
 gcloud init
 ```
 
+```sh
+export CLOUDSDK_PYTHON=python3.11
+```
+
 ## Identity and Access Management (IAM)
 
 https://cloud.google.com/docs/authentication/gcloud
