@@ -28,8 +28,12 @@ sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/b
 
 https://taskfile.dev/installation/#setup-completions
 
-```shell
-wget -O .taskfile.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
+```sh
+wget -O ~/task_completion.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
+```
+
+```sh
+source ~/task_completion.bash
 ```
 
 ## Redis
