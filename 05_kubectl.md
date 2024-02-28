@@ -33,3 +33,19 @@ kubectl cp $HOME/script default/ubuntu:/root/script
 ```sh
 kubectl cp default/ubuntu:/root/script $HOME/script
 ```
+
+## Port forwarding
+
+```sh
+
+```
+
+## Proxy
+
+```sh
+kubectl proxy --port 4000
+```
+
+```sh
+curl http://localhost:4000/api/v1/namespaces/default/pods
+```
