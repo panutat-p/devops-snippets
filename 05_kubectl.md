@@ -47,7 +47,7 @@ kubectl proxy --port 4000
 ```
 
 ```sh
-curl -s http://localhost:4000/api/v1/nodes
+curl -s http://localhost:4000/api/v1/nodes | jq -r '.items[] | {name: .metadata.name, spec: .spec, capacity: .status.capacity, allocatable: .status.allocatable}'
 ```
 
 ```sh
