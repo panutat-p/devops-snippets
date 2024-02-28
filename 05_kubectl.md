@@ -47,18 +47,17 @@ kubectl proxy --port 4000
 ```
 
 ```sh
-curl http://localhost:4000/api/v1/nodes
+curl -s http://localhost:4000/api/v1/nodes | jq -r '.items[].metadata.name'
 ```
 
 ```sh
-curl http://localhost:4000/apis/apps/v1/namespaces/default/deployments
+curl -s http://localhost:4000/apis/apps/v1/namespaces/default/deployments | jq -r '.items[].metadata.name'
 ```
 
 ```sh
-curl http://localhost:4000/api/v1/namespaces/default/pods
+curl -s http://localhost:4000/api/v1/namespaces/default/pods | jq -r '.items[].metadata.name'
 ```
 
 ```sh
-curl http://localhost:4000/apis/networking.k8s.io/v1/namespaces/default/ingresses
+curl -s http://localhost:4000/apis/networking.k8s.io/v1/namespaces/default/ingresses | jq -r '.items[] | {name: .metadata.name, spec: .spec, status: .status}'
 ```
-
