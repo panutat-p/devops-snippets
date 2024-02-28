@@ -47,7 +47,7 @@ kubectl proxy --port 4000
 ```
 
 ```sh
-curl -s http://localhost:4000/api/v1/nodes | jq -r '.items[].metadata.name'
+curl -s http://localhost:4000/api/v1/nodes
 ```
 
 ```sh
