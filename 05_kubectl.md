@@ -47,5 +47,18 @@ kubectl proxy --port 4000
 ```
 
 ```sh
+curl http://localhost:4000/api/v1/nodes
+```
+
+```sh
+curl http://localhost:4000/apis/apps/v1/namespaces/default/deployments
+```
+
+```sh
 curl http://localhost:4000/api/v1/namespaces/default/pods
 ```
+
+```sh
+curl http://localhost:4000/apis/networking.k8s.io/v1/namespaces/default/ingresses
+```
+
