@@ -25,13 +25,13 @@ kubectl exec pod/curl -- curl https://example.com
 ### Upload
 
 ```sh
-kubectl cp $HOME/script default/ubuntu:/root/script
+kubectl cp ~/script default/ubuntu:/root/script
 ```
 
 ## Download
 
 ```sh
-kubectl cp default/ubuntu:/root/script $HOME/script
+kubectl cp default/ubuntu:/root/script ~/script
 ```
 
 ## Port forwarding
