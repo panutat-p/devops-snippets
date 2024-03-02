@@ -20,7 +20,7 @@ apt install -y net-tools
 https://nmap.org/ncat
 
 ```sh
-apt install -y ncat nmap
+apt install -y nmap
 ```
 
 ## Utilities
