@@ -3,13 +3,22 @@
 ## Basic
 
 ```sh
+apt update
+apt upgrade -y
+```
+
+```sh
 apt install -y bash-completion lsb-release gpg curl wget git
 ```
 
 ## Network
 
-```shell
+```sh
 apt install -y net-tools
+```
+
+```sh
+apt install ncat
 ```
 
 ## Utilities
@@ -22,7 +31,7 @@ apt install -y jq yq
 
 https://taskfile.dev/installation
 
-```shell
+```sh
 sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
 ```
 
@@ -40,22 +49,21 @@ source /etc/task_completion.bash
 
 https://redis.io/docs/install/install-redis/install-redis-on-linux
 
-```shell
+```sh
 curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/redis.list
 
-apt update
 apt install -y redis
 ```
 
-```shell
+```sh
 apt install -y redis-tools
 ```
 
-```shell
+```sh
 redis-cli -h localhost -p 6379
 ```
 
-```shell
+```sh
 redis-cli -h localhost -p 6379 -a password
 ```
