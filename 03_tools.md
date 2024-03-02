@@ -17,8 +17,10 @@ apt install -y bash-completion lsb-release gpg curl wget git
 apt install -y net-tools
 ```
 
+https://nmap.org/ncat
+
 ```sh
-apt install ncat
+apt install -y ncat nmap
 ```
 
 ## Utilities
