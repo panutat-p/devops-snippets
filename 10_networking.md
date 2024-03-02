@@ -70,27 +70,3 @@ To list services, their current state, and their corresponding ports
 ```
 netstat -pnltu
 ```
-
-## ncat
-
-```shell
-apt install nmap
-```
-
-Run on bastion
-
-```shell
-ncat -l 2222 --sh-exec "ncat kafka_IP 9092"
-```
-
-Run locally
-
-Check
-```shell
-ncat -vz bastion_IP 2222
-```
-
-Connect
-```shell
-ncat bastion_IP 2222
-```
