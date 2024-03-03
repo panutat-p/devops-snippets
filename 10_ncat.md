@@ -49,7 +49,7 @@ ncat -vzu localhost 4000
 
 ### Host a an HTTP file
 
-```
+```http
 HTTP/1.0 200 OK
 
 <html>
