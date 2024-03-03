@@ -9,7 +9,7 @@ https://nmap.org/ncat/guide/index.html
 ### Ubuntu
 
 ```sh
-apt install -y nmap
+apt install -y ncat
 ```
 
 ### MacOS
@@ -21,7 +21,7 @@ https://nmap.org/book/inst-macosx.html
 ### manually retrieve a web page from an HTTP server
 
 ```sh
-nc -C google.com 80
+ncat -C google.com 80
 ```
 
 hit enter twice
@@ -31,7 +31,7 @@ GET / HTTP/1.0
 
 ## listen mode
 
-### Host a web
+### Host a an HTTP file
 
 ```
 HTTP/1.0 200 OK
@@ -44,21 +44,29 @@ HTTP/1.0 200 OK
 ```
 
 ```sh
-nc -l localhost 8080 < hello.http
+ncat -l localhost 8080 < hello.http
+```
+
+### Host an HTML file
+
+https://nmap.org/ncat/guide/ncat-tricks.html#ncat-httpserv
+
+```sh
+ncat -lk -p 8080 --sh-exec "echo -e 'HTTP/1.1 200 OK\r\n'; cat index.html"
 ```
 
 ### Forward proxy
 
 ```sh
-nc -l 2222 --sh-exec "ncat kafka_IP 9092"
+ncat -l 2222 --sh-exec "ncat kafka_IP 9092"
 ```
 
 Check
 ```sh
-nc -vz bastion_IP 2222
+ncat -vz bastion_IP 2222
 ```
 
 Connect
 ```sh
-nc bastion_IP 2222
+ncat bastion_IP 2222
 ```
