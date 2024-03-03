@@ -11,36 +11,6 @@ apt upgrade -y
 apt install -y bash-completion lsb-release gpg curl wget git
 ```
 
-## Network
-
-```sh
-apt install -y net-tools
-```
-
-https://nmap.org/ncat
-
-```sh
-apt install -y nmap
-```
-
-Run on bastion
-
-```sh
-nc -l 2222 --sh-exec "ncat kafka_IP 9092"
-```
-
-Run locally
-
-Check
-```sh
-nc -vz bastion_IP 2222
-```
-
-Connect
-```sh
-nc bastion_IP 2222
-```
-
 ## Utilities
 
 ```sh
