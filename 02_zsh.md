@@ -1,7 +1,7 @@
 # Mac OS
 
 ```zsh
-export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$HOME/go/bin
 
 [[ $commands[kubectl] ]] && source <(kubectl completion zsh)
 complete -o default -F __start_kubectl k
