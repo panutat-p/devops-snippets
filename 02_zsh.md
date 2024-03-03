@@ -1,4 +1,6 @@
-# Mac OS
+# zsh in MacOS
+
+## `.zshrc`
 
 ```zsh
 export PATH=$PATH:$HOME/go/bin
@@ -38,8 +40,8 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
 plugins=( 
-    git
-    zsh-autosuggestions
+  git
+  zsh-autosuggestions
 )
 
 export ZSH="$HOME/.oh-my-zsh"
@@ -119,4 +121,3 @@ https://github.com/jesseduffield/lazydocker
 brew install jesseduffield/lazydocker/lazydocker
 brew install lazydocker
 ```
-
