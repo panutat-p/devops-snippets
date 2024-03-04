@@ -46,6 +46,8 @@ apt update
 apt install -y redis
 ```
 
+https://docs.redis.com/latest/rs/references/cli-utilities/redis-cli
+
 ```sh
 redis-cli -h localhost -p 6379
 ```
