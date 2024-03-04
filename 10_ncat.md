@@ -14,7 +14,12 @@ apt install -y ncat
 
 ### MacOS
 
-https://nmap.org/book/inst-macosx.html
+https://nmap.org/download.html#macosx
+
+```sh
+wget -O nmap.dmg https://nmap.org/dist/nmap-7.94.dmg
+open nmap.dmg
+```
 
 ## connect mode
 
