@@ -6,7 +6,17 @@ https://nmap.org/ncat/guide/index.html
 
 ## Install
 
-### Ubuntu
+### Ubuntu rpm to deb
+
+https://nmap.org/download.html#linux-rpm
+
+```sh
+wget -o ncat-7.94-1.x86_64.rpm https://nmap.org/dist/ncat-7.94-1.x86_64.rpm
+alien --to-deb ncat-7.94-1.x86_64.rpm
+dpkg --install ncat-7.95-2_amd64.deb
+```
+
+### Ubuntu apt
 
 ```sh
 apt install -y ncat
