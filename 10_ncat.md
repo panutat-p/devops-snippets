@@ -13,7 +13,7 @@ https://nmap.org/download.html#linux-rpm
 ```sh
 wget https://nmap.org/dist/ncat-7.94-1.x86_64.rpm
 alien --to-deb ncat-7.94-1.x86_64.rpm
-dpkg --install ncat-7.95-2_amd64.deb
+dpkg --install ncat_7.94-2_amd64.deb
 ```
 
 ### Ubuntu apt
