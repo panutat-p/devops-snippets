@@ -8,7 +8,7 @@ apt upgrade -y
 ```
 
 ```sh
-apt install -y bash-completion lsb-release gpg curl wget git
+apt install -y bash-completion lsb-release gpg alien curl wget git
 ```
 
 ## Utilities
@@ -42,12 +42,8 @@ https://redis.io/docs/install/install-redis/install-redis-on-linux
 ```sh
 curl -fsSL https://packages.redis.io/gpg | gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | tee /etc/apt/sources.list.d/redis.list
-
+apt update
 apt install -y redis
-```
-
-```sh
-apt install -y redis-tools
 ```
 
 ```sh
@@ -55,5 +51,5 @@ redis-cli -h localhost -p 6379
 ```
 
 ```sh
-redis-cli -h localhost -p 6379 -a password
+redis-cli -h localhost -p 6379 -a password -n 0
 ```
