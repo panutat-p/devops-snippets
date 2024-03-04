@@ -14,7 +14,7 @@ apt install -y bash-completion lsb-release gpg alien curl wget git
 ## Utilities
 
 ```sh
-apt install -y jq yq
+apt install -y jq yq bzip2
 ```
 
 ## TaskFile
