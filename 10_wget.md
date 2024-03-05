@@ -6,28 +6,34 @@
 * `-O arg` specify output
 * `-t arg` set number of retries
 * `-m` mirror
+* `-c` continue
 
 Save a web page
-```shell
+```sh
 wget http://go.dev \
   -O home.html
 ```
 
 Show Output in stdout
-```shell
+```sh
 wget -O - https://example.com
 ```
 
-```shell
+```sh
 wget -q -O /dev/stdout https://example.com
 ```
 
 Download file
-```shell
+```sh
 wget -O go.tar.gz https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
 ```
 
 Download mirror of a website
-```shell
+```sh
 wget -m https://example.com
+```
+
+Resume the download
+```sh
+wget -c https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
 ```
