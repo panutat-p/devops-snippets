@@ -4,13 +4,13 @@ https://stackoverflow.com/a/70454786
 
 ## Set up
 
-```shell
+```sh
 git remote add origin https://github.com/user/repo.git
 git branch -M main
 git push -u origin main
 ```
 
-```shell
+```sh
 git config --global user.name "monkey"
 git config --global user.email "monkey@gmail.com"
 git config --global init.defaultBranch main
@@ -18,101 +18,105 @@ git config --global init.defaultBranch main
 
 ## Download
 
-```shell
-git clone -b main https://github.com/freeCodeCamp/freeCodeCamp.git
+```sh
+git clone -b main https://github.com/skills/introduction-to-github.git
 ```
 
-```shell
+```sh
+git clone https://github.com/skills/introduction-to-github.git intro_to_github
+```
+
+```sh
 git fetch
 ```
 
 List local branches
-```shell
+```sh
 git branch
 ```
 
 List remote branches
-```shell
+```sh
 git branch -r
 ```
 
 List all branches
-```shell
+```sh
 git branch -a
 ```
 
 Checkout local or remote branch
-```shell
+```sh
 git switch feat/v1
 ```
 
 Create a new branch from the current branch
-```shell
+```sh
 git switch -c feat/v1
 ```
 
 Create a new branch from the remote branch
-```shell
+```sh
 git switch -c feat/v2 /origin/main
 ```
 
 ## Manage
 
 Rename current branch
-```shell
+```sh
 git branch -m new-branch-name
 ```
 
 Delete local branch
-```shell
+```sh
 git branch -d feat/v1
 ```
 
 ## History
 
-```shell
+```sh
 git status
 ```
 
-```shell
+```sh
 git log --graph --oneline --decorate
 ```
 
 ## Checkout
 
 Checkout at the revision hash
-```shell
+```sh
 git checkout revision_hash
 ```
 
 Create a new branch from revision hash
-```shell
+```sh
 git checkout -b feat/v1 revision_hash f668219
 ```
 
 ## Clear
 
 Discard uncommitted local changes
-```shell
+```sh
 git restore .
 ```
 
 Delete uncommitted files
-```shell
+```sh
 git clean -fd
 ```
 
 Removes the file from the index but leaves it in the working directory
-```shell
+```sh
 git rm --cached .DS_Store
 ```
 
 ## Upload
 
-```shell
+```sh
 git commit -m "feat: update README.md"
 ```
 
-```shell
+```sh
 git push -u origin feat/v1
 ```
