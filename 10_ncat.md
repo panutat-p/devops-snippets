@@ -90,5 +90,31 @@ ncat -lk -p 8080 --sh-exec "echo -e 'HTTP/1.1 200 OK\r\n'; cat index.html"
 ### Forward proxy
 
 ```sh
+ncat -lk 4001 --sh-exec 'ncat 10.98.32.11 6379'
+```
+
+```sh
 ncat -lk 8080 --sh-exec 'ncat localhost 4000'
+```
+
+### Running in background
+
+```sh
+nohup ncat -lk 4001 --sh-exec 'ncat 10.2.1.1 6379' &
+```
+
+```sh
+ps aux | grep 'ncat'
+```
+
+```sh
+kill $PID
+```
+
+```sh
+kubectl port-forward pod/ubuntu 4001:4001
+```
+
+```sh
+redis-cli -h localhost -p 4001 PING
 ```
