@@ -56,4 +56,19 @@ kconfig() {
 ksecret() {
   kubectl get secret $1 -o json | jq -r '.data | to_entries[] | .key + ": " + (.value | @base64d)'
 }
+
+port() {
+  lsof -P -n -i :$1
+}
+
+kport() {
+  pid=$(lsof -t -i:$1)
+  if [ -n "$pid" ]; then
+    process_name=$(ps -p $pid -o comm=)
+    kill $pid
+    echo "Closed process $pid ($process_name) on port $1"
+  else
+    echo "No process running on port $1"
+  fi
+}
 ```
