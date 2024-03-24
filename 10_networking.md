@@ -32,6 +32,26 @@ ip r
 
 ## Port number
 
+List all listening port
+```
+lsof -i -P -n | grep LISTEN
+```
+
+Check task that use port 8080
+```
+lsof -i:8080
+```
+
+Close the task by SIGTERM
+```
+kill $(lsof -t -i:8080)
+```
+
+Close the task by SIGKILL
+```
+kill -9 $(lsof -t -i:8080)
+```
+
 https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux
 
 List all open ports
