@@ -26,29 +26,29 @@ ip link show
 ```
 
 Show the routing table
-```shell
+```sh
 ip r
 ```
 
 ## Port number
 
-List all listening port
-```
-lsof -i -P -n | grep LISTEN
+List all listening port numbers
+```sh
+lsof -P -n -i | grep LISTEN
 ```
 
 Check task that use port 8080
-```
-lsof -i:8080
+```sh
+lsof -P -n -i :8080
 ```
 
 Close the task by SIGTERM
-```
+```sh
 kill $(lsof -t -i:8080)
 ```
 
 Close the task by SIGKILL
-```
+```sh
 kill -9 $(lsof -t -i:8080)
 ```
 
