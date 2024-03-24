@@ -58,15 +58,21 @@ ksecret() {
 }
 
 port() {
-  lsof -P -n -i :$1
+  pid=$(lsof -t -i :$1)
+  if [ -n "$pid" ]; then
+    lsof -P -n -i :$1
+    echo
+    echo $(ps -p $pid -o comm=)
+  else
+    echo "No process running on port $1"
+  fi
 }
 
 kport() {
   pid=$(lsof -t -i:$1)
   if [ -n "$pid" ]; then
-    process_name=$(ps -p $pid -o comm=)
     kill $pid
-    echo "Closed process $pid ($process_name) on port $1"
+    echo "Closed process $pid on port $1"
   else
     echo "No process running on port $1"
   fi
