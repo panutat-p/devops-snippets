@@ -1,38 +1,50 @@
 # Files
 
+## disk
+
+List directory & file size
+```sh
+du -sh *
+```
+
+List directory & file size, sort by size descending
+```sh
+du -sh * | sort -rh
+```
+
 ## tar
 
 Compress
-```shell
+```sh
 tar -cvf archive.tar directory
 ```
 
 Compress using gzip
-```shell
+```sh
 tar -cvzf archive.tar.gz directory
 ```
 
 Extract
-```shell
+```sh
 tar -xvf archive.tar
 ```
 
 Extract (automatically detect the compression type: gzip, bzip2, etc.)
-```shell
+```sh
 tar -xvf archive.tar.gz
 ```
 
 Extract gzipped tar (explicit)
-```shell
+```sh
 tar -xvzf archive.tar.gz
 ```
 
 ## zip
 
-```shell
+```sh
 zip -r archive.zip directory
 ```
 
-```shell
+```sh
 unzip archive.zip
 ```
