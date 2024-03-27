@@ -1,6 +1,6 @@
 # gcloud
 
-## MacOS ARM
+## MacOS
 
 https://cloud.google.com/sdk/docs/install#mac
 
