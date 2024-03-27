@@ -1,11 +1,17 @@
 # gcloud
 
-## MacOS
+## MacOS ARM
 
 https://cloud.google.com/sdk/docs/install#mac
 
+Intel
 ```sh
-wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-464.0.0-darwin-arm.tar.gz
+wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-x86_64.tar.gz
+```
+
+ARM
+```sh
+wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-arm.tar.gz
 ```
 
 ```sh
@@ -13,7 +19,7 @@ tar -C $HOME -xvf gcloud.tar.gz
 ```
 
 ```sh
-$HOME/gcloud.tar.gz
+./$HOME/google-cloud-sdk/install.sh
 ```
 
 ```sh
