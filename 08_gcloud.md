@@ -14,6 +14,8 @@ ARM
 wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-arm.tar.gz
 ```
 
+---
+
 ```sh
 tar -C $HOME -xvf gcloud.tar.gz
 ```
