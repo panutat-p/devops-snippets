@@ -1,20 +1,18 @@
 # gcloud
 
-## MacOS
+## Install
 
 https://cloud.google.com/sdk/docs/install#mac
 
-Intel
+MacOS Intel
 ```sh
 wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-x86_64.tar.gz
 ```
 
-ARM
+MacOS ARM
 ```sh
 wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-arm.tar.gz
 ```
-
----
 
 ```sh
 tar -C $HOME -xvf gcloud.tar.gz
@@ -32,7 +30,7 @@ gcloud init
 export CLOUDSDK_PYTHON=python3.11
 ```
 
-## Identity and Access Management (IAM)
+## IAM
 
 https://cloud.google.com/docs/authentication/gcloud
 
@@ -54,6 +52,10 @@ https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubect
 
 ```sh
 gcloud components install gke-gcloud-auth-plugin
+```
+
+```sh
+gke-gcloud-auth-plugin --version
 ```
 
 ```sh
