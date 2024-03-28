@@ -8,7 +8,7 @@ apt upgrade -y
 ```
 
 ```sh
-apt install -y bash-completion lsb-release gpg alien curl wget git
+apt install -y bash-completion lsb-release gpg gnupg apt-transport-https ca-certificates alien curl wget git
 ```
 
 ## Utilities
