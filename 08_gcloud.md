@@ -7,11 +7,11 @@ https://cloud.google.com/sdk/docs/install#mac
 Ubuntu
 ```sh
 apt update
-apt install apt-transport-https ca-certificates gnupg curl
+apt install -y apt-transport-https ca-certificates gnupg curl
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -o /usr/share/keyrings/cloud.google.gpg
 echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main" |  tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 apt update
-apt install google-cloud-cli
+apt install -y google-cloud-cli
 ```
 
 MacOS Intel
