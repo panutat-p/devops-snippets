@@ -6,9 +6,11 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 ## Install
 
-Ubuntu
+Ubuntu x86
 ```sh
-
+curl 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip' -o 'aws_cli.zip'
+unzip -u aws_cli.zip
+sudo ./aws/install
 ```
 
 MacOS
