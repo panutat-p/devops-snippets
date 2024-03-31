@@ -56,5 +56,5 @@ https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
 
 Create kubeconfig file automatically
 ```
-aws eks update-kubeconfig --region ap-southeast-1 --name cluster_name
+aws eks update-kubeconfig --region region_code --name cluster_name
 ```
