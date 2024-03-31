@@ -131,7 +131,7 @@ brew install gh
 ```
 
 ```sh
-gh auth login
+gh auth login --web -h github.com
 ```
 
 ```sh
