@@ -8,13 +8,11 @@ apt upgrade -y
 ```
 
 ```sh
-apt install -y bash-completion lsb-release gpg gnupg apt-transport-https ca-certificates alien curl wget git
+apt install -y bash-completion lsb-release gpg gnupg apt-transport-https ca-certificates
 ```
 
-## Utilities
-
 ```sh
-apt install -y jq yq bzip2
+apt install -y jq yq bzip2 alien curl wget git
 ```
 
 ## TaskFile
