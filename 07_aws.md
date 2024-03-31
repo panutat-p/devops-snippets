@@ -43,6 +43,10 @@ aws configure --profile admin
 ```
 
 ```sh
+cat ~/.aws/config
+```
+
+```sh
 aws configure list
 ```
 
