@@ -13,7 +13,7 @@ complete -o default -F __start_kubectl k
 
 https://ohmyz.sh/#install
 
-```shell
+```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -21,7 +21,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 https://github.com/romkatv/powerlevel10k
 
-```shell
+```sh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
@@ -29,7 +29,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 https://github.com/zsh-users/zsh-autosuggestions
 
-```shell
+```sh
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
@@ -56,34 +56,34 @@ if [ -f '/Users/pnt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pnt/g
 
 ## Colima
 
-```shell
+```sh
 brew install colima
 ```
 
 List available CPUs
-```shell
+```sh
 qemu-system-aarch64 -cpu help
 ```
 
-```shell
+```sh
 colima start --cpu 4 --memory 8 --very-verbose
 ```
 
-```shell
+```sh
 colima status --very-verbose
 ```
 
-```shell
+```sh
 colima stop --force
 ```
 
-```shell
+```sh
 colima delete
 ```
 
 ## Docker
 
-```shell
+```sh
 brew install docker
 ```
 
@@ -91,25 +91,25 @@ brew install docker
 
 https://github.com/abiosoft/colima/discussions/273#discussioncomment-4959736
 
-```shell
+```sh
 mkdir -p ~/.docker/cli-plugins
 ```
 
-```shell
+```sh
 brew install docker-buildx
 ```
 
-```shell
+```sh
 ln -sfn /opt/homebrew/opt/docker-buildx/bin/docker-buildx ~/.docker/cli-plugins/docker-buildx
 ```
 
 https://github.com/docker/compose/issues/8630#issuecomment-1169537632
 
-```shell
+```sh
 brew install docker-compose
 ```
 
-```shell
+```sh
 ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ```
 
@@ -117,7 +117,26 @@ ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugin
 
 https://github.com/jesseduffield/lazydocker
 
-```shell
+```sh
 brew install jesseduffield/lazydocker/lazydocker
 brew install lazydocker
+```
+
+## GitHub CLI
+
+```sh
+brew install gh
+```
+
+```sh
+gh auth login
+```
+
+```sh
+gh extension install github/gh-copilot
+gh extension upgrade gh-copilot
+```
+
+```sh
+gh copilot explain 'go programming'
 ```
