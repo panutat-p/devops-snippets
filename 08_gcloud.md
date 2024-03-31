@@ -44,6 +44,8 @@ export CLOUDSDK_PYTHON=python3.11
 
 https://cloud.google.com/docs/authentication/gcloud
 
+https://cloud.google.com/compute/docs/regions-zones#available
+
 ```sh
 gcloud auth login
 ```
@@ -69,7 +71,7 @@ gke-gcloud-auth-plugin --version
 ```
 
 ```sh
-gcloud container clusters get-credentials gke_cluster_name --region asia-southeast1-a --project project_name
+gcloud container clusters get-credentials gke_cluster_name --region region_code --project project_name
 ```
 
 ```sh
