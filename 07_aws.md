@@ -32,14 +32,27 @@ which aws
 aws --version
 ```
 
-## EKS
+## IAM
 
-https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html
 
-Check aws credentials
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
+
+```sh
+aws configure --profile admin
+```
+
+```sh
+aws configure list
+```
+
 ```sh
 aws sts get-caller-identity
 ```
+
+## EKS
+
+https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
 
 Create kubeconfig file automatically
 ```
