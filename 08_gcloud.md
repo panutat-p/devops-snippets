@@ -69,7 +69,7 @@ gke-gcloud-auth-plugin --version
 ```
 
 ```sh
-gcloud container clusters get-credentials gke_cluster_name --region region_name --project project_name
+gcloud container clusters get-credentials gke_cluster_name --region asia-southeast1-a --project project_name
 ```
 
 ```sh
