@@ -124,6 +124,8 @@ brew install lazydocker
 
 ## GitHub CLI
 
+https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli
+
 ```sh
 brew install gh
 ```
