@@ -31,3 +31,17 @@ which aws
 ```sh
 aws --version
 ```
+
+## EKS
+
+https://docs.aws.amazon.com/eks/latest/userguide/create-kubeconfig.html
+
+Check aws credentials
+```sh
+aws sts get-caller-identity
+```
+
+Create kubeconfig file automatically
+```
+aws eks update-kubeconfig --region ap-southeast-1 --name cluster_name
+```
