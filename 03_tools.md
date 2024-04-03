@@ -25,8 +25,14 @@ sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/b
 
 https://taskfile.dev/installation/#setup-completions
 
+Ubuntu
 ```sh
 wget -O /etc/task_completion.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
+```
+
+MacOS
+```sh
+wget -O /usr/local/share/zsh/site-functions/_task https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task
 ```
 
 ```sh
