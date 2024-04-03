@@ -54,6 +54,14 @@ if [ -f '/Users/pnt/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pnt/google-
 if [ -f '/Users/pnt/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/pnt/google-cloud-sdk/completion.zsh.inc'; fi
 ```
 
+### Instant prompt
+
+https://github.com/romkatv/powerlevel10k/blob/master/README.md#instant-prompt
+
+```bash
+cat .p10k.zsh
+```
+
 ## Colima
 
 ```sh
