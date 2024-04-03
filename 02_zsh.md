@@ -118,7 +118,6 @@ ln -sfn /opt/homebrew/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugin
 https://github.com/jesseduffield/lazydocker
 
 ```sh
-brew install jesseduffield/lazydocker/lazydocker
 brew install lazydocker
 ```
 
