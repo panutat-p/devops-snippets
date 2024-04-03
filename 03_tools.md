@@ -29,14 +29,13 @@ Ubuntu
 ```sh
 wget -O /etc/task_completion.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
 ```
+```sh
+source /etc/task_completion.bash
+```
 
 MacOS
 ```sh
 wget -O /usr/local/share/zsh/site-functions/_task https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task
-```
-
-```sh
-source /etc/task_completion.bash
 ```
 
 ## Redis
