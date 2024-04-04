@@ -5,15 +5,22 @@ https://stackoverflow.com/a/70454786
 ## Set up
 
 ```sh
-git remote add origin https://github.com/user/repo.git
-git branch -M main
-git push -u origin main
+git config --global user.name '__'
+git config --global user.email '__'
+git config --global init.defaultBranch 'main'
+git config --global pull.rebase 'true'
 ```
 
 ```sh
-git config --global user.name "monkey"
-git config --global user.email "monkey@gmail.com"
-git config --global init.defaultBranch main
+git config --global url.'https://username:token@gitlab.com/'.insteadOf 'https://gitlab.com/'
+```
+
+## Init repo
+
+```sh
+git remote add origin https://github.com/user/repo.git
+git branch -M main
+git push -u origin main
 ```
 
 ## Download
