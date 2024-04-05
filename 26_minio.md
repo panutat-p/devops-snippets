@@ -29,13 +29,21 @@ volumes:
 ### Generate local Amazon credentials file
 
 ```sh
-mkdir -p ~/.aws
-touch ~/.aws/credentials
+aws configure --profile local
 ```
 
-`~/.aws/credentials`
+```sh
+cat ~/.aws/config
 ```
-[local]
-aws_access_key_id = root
-aws_secret_access_key = 1234
+
+```sh
+cat ~/.aws/credentials
+```
+
+```sh
+aws configure list
+```
+
+```sh
+export AWS_PROFILE=local
 ```
