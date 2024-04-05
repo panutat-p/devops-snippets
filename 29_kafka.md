@@ -4,10 +4,7 @@ https://github.com/provectus/kafka-ui/blob/master/documentation/compose/DOCKER_C
 
 ## Expose both Kafka UI and Kafka broker
 
-`compose.yaml`
 ```yaml
-version: '3.9'
-
 services:
 
   kafka0:
@@ -38,7 +35,7 @@ services:
     container_name: kafka-ui
     image: 'provectuslabs/kafka-ui:latest'
     ports:
-      - "8080:8080"
+      - '8080:8080'
     environment:
       DYNAMIC_CONFIG_ENABLED: 'true'
       KAFKA_CLUSTERS_0_NAME: local
