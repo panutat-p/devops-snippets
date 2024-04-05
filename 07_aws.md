@@ -47,7 +47,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
 
 ```sh
-aws configure --profile admin
+aws configure --profile dev
 ```
 
 ```sh
@@ -60,6 +60,10 @@ cat ~/.aws/credentials
 
 ```sh
 aws configure list
+```
+
+```sh
+export AWS_PROFILE=dev
 ```
 
 ```sh
