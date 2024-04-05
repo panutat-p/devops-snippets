@@ -16,6 +16,7 @@ services:
     environment:
       RABBITMQ_DEFAULT_USER: root
       RABBITMQ_DEFAULT_PASS: 1234
+    restart: unless-stopped
 
 volumes:
   rabbitmq_data:
