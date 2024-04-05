@@ -55,6 +55,10 @@ cat ~/.aws/config
 ```
 
 ```sh
+cat ~/.aws/credentials
+```
+
+```sh
 aws configure list
 ```
 
