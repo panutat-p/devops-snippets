@@ -149,3 +149,9 @@ gh extension upgrade gh-copilot
 ```sh
 gh copilot explain 'go programming'
 ```
+
+## AWS
+
+```sh
+export AWS_PROFILE=local
+```
