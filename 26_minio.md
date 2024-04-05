@@ -35,7 +35,7 @@ touch ~/.aws/credentials
 
 `~/.aws/credentials`
 ```
-[default]
+[local]
 aws_access_key_id = root
 aws_secret_access_key = 1234
 ```
