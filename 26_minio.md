@@ -26,7 +26,7 @@ volumes:
     external: true
 ```
 
-### Generate local Amazon credentials file
+## Generate local Amazon credentials file
 
 ```sh
 aws configure --profile local
@@ -48,9 +48,11 @@ aws configure list
 export AWS_PROFILE=local
 ```
 
-### CLI
+## MinIO CLI
 
 https://github.com/minio/mc
+
+### Install
 
 MacOS
 ```sh
@@ -59,14 +61,15 @@ brew install minio-mc
 
 Ubuntu
 ```sh
-wget https://dl.min.io/client/mc/release/linux-amd64/mc
-chmod +x mc
-mv mc /usr/local/bin
+wget -O /usr/local/bin/mc https://dl.min.io/client/mc/release/linux-amd64/mc && sudo chmod +x /usr/local/bin/mc
+chmod +x /usr/local/bin/mc
 ```
 
 ```sh
 mc --autocompletion
 ```
+
+### Upload a file
 
 ```sh
 mc alias set s3 http://localhost:9000 root 1234
