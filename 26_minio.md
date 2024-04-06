@@ -9,7 +9,7 @@ https://github.com/minio/minio
 ```yaml
 services:
   minio:
-    image: minio/minio
+    image: minio/minio:latest
     volumes:
       - type: volume
         source: minio_data
