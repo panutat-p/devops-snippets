@@ -8,6 +8,8 @@ https://github.com/drakkan/sftpgo/blob/main/docs/howto/getting-started.md
 
 https://github.com/drakkan/sftpgo/blob/main/docs/full-configuration.md
 
+https://github.com/drakkan/sftpgo/blob/main/sftpgo.json
+
 ```yaml
 services:
   sftp:
@@ -19,6 +21,8 @@ services:
     environment:
       SFTPGO_DEFAULT_ADMIN_USERNAME: root
       SFTPGO_DEFAULT_ADMIN_PASSWORD: 1234
+      SFTPGO_HTTPD__ADMIN__USERNAME: root
+      SFTPGO_HTTPD__ADMIN__PASSWORD: 1234
       SFTPGO_FTPD__BINDINGS__0__PORT: 2121
       SFTPGO_GRACE_TIME: 10
     volumes:
