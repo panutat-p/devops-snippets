@@ -47,3 +47,31 @@ aws configure list
 ```sh
 export AWS_PROFILE=local
 ```
+
+### CLI
+
+https://github.com/minio/mc
+
+MacOS
+```sh
+brew install minio-mc
+```
+
+Ubuntu
+```sh
+wget https://dl.min.io/client/mc/release/linux-amd64/mc
+chmod +x mc
+mv mc /usr/local/bin
+```
+
+```sh
+mc --autocompletion
+```
+
+```sh
+mc alias set s3 http://localhost:9000 root 1234
+```
+
+```sh
+mc cp apple.jpg s3/fruits
+```
