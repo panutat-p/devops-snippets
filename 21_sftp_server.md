@@ -43,14 +43,6 @@ alias dsftp='sftp -i ~/compose/ssh_host_ed25519_key -P 2222 admin@localhost'
 
 ## Use ssh key in the volume
 
-```sh
-docker volume create ssh_key_data
-```
-
-```sh
-docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 busybox:stable
-```
-
 ```yaml
 services:
   sftp:
