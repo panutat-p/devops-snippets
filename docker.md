@@ -2,30 +2,49 @@
 
 ## Commands
 
-```shell
+```sh
 docker container ls -a
 ```
 
-```shell
+```sh
 docker image ls
 ```
 
-Remove unused containers
-```shell
-docker container prune
+Remove stopped containers
+```sh
+docker container prune -f
+```
+
+Remove all containers
+```sh
+docker rm -f $(docker ps -aq)
 ```
 
 Remove unused images
-```shell
-docker image prune
+```sh
+docker image prune -f
 ```
 
 Remove unused volumes
-```shell
-docker volume prune
+```sh
+docker volume prune -f
 ```
 
-Remove everything
-```shell
-docker system prune -a --volumes
+Remove unused images, unused containers, unused volumes, unused networks, and caches
+```sh
+docker system prune -a -f --volumes
+```
+
+## Create a docker volume with a file
+
+```sh
+docker volume create ssh_key_data
+```
+
+```sh
+docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 scratch
+```
+
+```sh
+docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 busybox:stable
 ```
