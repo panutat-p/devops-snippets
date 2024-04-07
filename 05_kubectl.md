@@ -37,7 +37,11 @@ kubectl cp default/ubuntu:/root/script ~/script
 ## Port forwarding
 
 ```sh
+kubectl port-forward pod/nginx 8080:80
+```
 
+```sh
+kubectl port-forward svc/nginx-service 8080
 ```
 
 ## Proxy
