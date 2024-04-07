@@ -42,7 +42,7 @@ docker volume create ssh_key_data
 ```
 
 ```sh
-docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 alpine:3
+docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 alpine:3 cp /tmp/id_ed25519 /tmp
 ```
 
 ```sh
