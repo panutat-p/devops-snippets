@@ -42,9 +42,5 @@ docker volume create ssh_key_data
 ```
 
 ```sh
-docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 scratch
-```
-
-```sh
 docker run --rm -v ssh_key_data:/tmp -v ~/.ssh/id_ed25519:/tmp/id_ed25519 busybox:stable
 ```
