@@ -13,7 +13,7 @@ https://github.com/atmoz/sftp
 ## User `admin` without `chroot` with SSH private key
 
 ```sh
-ssh-keygen -t ed25519 -f ~/compose/ssh_host_ed25519_key < /dev/null
+ssh-keygen -t ed25519 -f ~/compose/id_ed25519 < /dev/null
 ```
 
 ```yaml
@@ -28,13 +28,17 @@ services:
         source: sftp_server_data
         target: /home/admin
       - type: bind
-        source: ssh_host_ed25519_key
+        source: id_ed25519
         target: /etc/ssh/ssh_host_ed25519_key
     restart: unless-stopped
 
 volumes:
   sftp_server_data:
     external: true
+```
+
+```sh
+alias dsftp='sftp -i ~/compose/id_ed25519'
 ```
 
 ```sh
