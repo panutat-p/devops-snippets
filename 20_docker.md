@@ -43,6 +43,10 @@ docker system prune -a -f --volumes
 ## Create a docker volume with a file
 
 ```sh
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 < /dev/null
+```
+
+```sh
 docker volume create ssh_key_data
 ```
 
