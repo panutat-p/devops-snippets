@@ -25,9 +25,14 @@ Remove unused images
 docker image prune -f
 ```
 
-Remove unused volumes
+Remove all images
 ```sh
-docker volume prune -f
+docker image prune -a -f
+```
+
+Remove all volumes
+```sh
+docker volume prune -a -f
 ```
 
 Remove unused images, unused containers, unused volumes, unused networks, and caches
@@ -46,5 +51,5 @@ docker run --rm -v ssh_key_data:/data -v ~/.ssh/id_ed25519:/tmp/id_ed25519 alpin
 ```
 
 ```sh
-docker run -it --rm -v ssh_key_data:/tmp alpine:3 sh
+docker run -it --rm -v ssh_key_data:/data alpine:3 sh
 ```
