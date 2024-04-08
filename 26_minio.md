@@ -4,6 +4,8 @@ https://hub.docker.com/r/minio/minio
 
 https://github.com/minio/minio
 
+https://min.io/docs/minio/container/index.html
+
 ## Simple
 
 ```yaml
