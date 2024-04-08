@@ -38,7 +38,7 @@ volumes:
 ```
 
 ```sh
-alias dsftp='sftp -i ~/compose/ssh_host_ed25519_key -P 2222 admin@localhost'
+alias dsftp='sftp -i ~/compose/id_ed25519 -P 2222 admin@localhost'
 ```
 
 ## Use ssh key in the volume
