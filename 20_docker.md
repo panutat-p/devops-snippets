@@ -39,21 +39,3 @@ Remove unused images, unused containers, unused volumes, unused networks, and ca
 ```sh
 docker system prune -a -f --volumes
 ```
-
-## Create a docker volume with a file
-
-```sh
-ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 < /dev/null
-```
-
-```sh
-docker volume create ssh_key_data
-```
-
-```sh
-docker run --rm -v ssh_key_data:/data -v ~/.ssh/id_ed25519:/tmp/id_ed25519 alpine:3 /bin/sh -c 'cp /tmp/id_ed25519 /data && chmod 600 /data/id_ed25519'
-```
-
-```sh
-docker run -it --rm -v ssh_key_data:/data alpine:3 sh
-```
