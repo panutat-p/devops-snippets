@@ -20,7 +20,7 @@ ssh-keygen -t ed25519 -f ~/compose/id_ed25519 < /dev/null
 services:
   sftp:
     image: atmoz/sftp:debian
-    command: admin:1234:::
+    command: 'admin:1234:::'
     ports:
       - '2222:22'
     volumes:
@@ -47,7 +47,7 @@ alias dsftp='sftp -i ~/compose/ssh_host_ed25519_key -P 2222 admin@localhost'
 services:
   sftp:
     image: atmoz/sftp:debian
-    command: admin:1234:::
+    command: 'admin:1234:::'
     ports:
       - '2222:22'
     volumes:
