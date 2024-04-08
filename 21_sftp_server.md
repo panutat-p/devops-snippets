@@ -1,4 +1,4 @@
-# SFTP
+# SFTP Server
 
 https://hub.docker.com/r/atmoz/sftp
 
@@ -42,6 +42,23 @@ alias dsftp='sftp -i ~/compose/ssh_host_ed25519_key -P 2222 admin@localhost'
 ```
 
 ## Use ssh key in the volume
+
+🚫 limitation with Docker volumes.
+* When a file is mounted from a Docker volume into a container
+* the file's permissions are set to `0755` regardless of the permissions set on the file in the volume
+
+```
+sftp-server-1  | [/entrypoint] Executing sshd
+sftp-server-1  | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+sftp-server-1  | @         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+sftp-server-1  | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+sftp-server-1  | Permissions 0755 for '/etc/ssh/ssh_host_ed25519_key' are too open.
+sftp-server-1  | It is required that your private key files are NOT accessible by others.
+sftp-server-1  | This private key will be ignored.
+sftp-server-1  | Unable to load host key "/etc/ssh/ssh_host_ed25519_key": bad permissions
+sftp-server-1  | Unable to load host key: /etc/ssh/ssh_host_ed25519_key
+sftp-server-1  | Unable to load host key: /etc/ssh/ssh_host_rsa_key
+```
 
 ```yaml
 services:
