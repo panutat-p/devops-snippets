@@ -38,6 +38,10 @@ volumes:
 ```
 
 ```sh
+ssh-keygen -R "[localhost]:2222"
+```
+
+```sh
 alias dsftp='sftp -i ~/compose/id_ed25519 -P 2222 admin@localhost'
 ```
 
