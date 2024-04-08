@@ -72,10 +72,14 @@ chmod +x /usr/local/bin/mc
 mc --autocompletion
 ```
 
-### Upload a file
+### Guide
 
 ```sh
 mc alias set local http://localhost:9000 root 12345678
+```
+
+```sh
+mc admin info local
 ```
 
 ```sh
