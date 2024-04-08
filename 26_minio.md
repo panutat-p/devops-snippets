@@ -83,5 +83,5 @@ mc admin info local
 ```
 
 ```sh
-mc cp apple.jpg s3/fruits
+mc cp apple.jpg local/fruits
 ```
