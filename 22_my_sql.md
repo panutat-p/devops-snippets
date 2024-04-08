@@ -25,6 +25,7 @@ volumes:
 services:
   mysql:
     image: mysql:5
+    platform: linux/amd64
     ports:
       - '3306:3306'
     environment:
