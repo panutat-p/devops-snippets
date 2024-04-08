@@ -28,7 +28,7 @@ services:
         source: sftp_server_data
         target: /home/admin
       - type: bind
-        source: id_ed25519
+        source: id_ed25519.pub
         target: /etc/ssh/ssh_host_ed25519_key
     restart: unless-stopped
 
@@ -39,6 +39,24 @@ volumes:
 
 ```sh
 alias dsftp='sftp -i ~/compose/id_ed25519 -P 2222 admin@localhost'
+```
+
+## Create a docker volume with a file
+
+```sh
+ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 < /dev/null
+```
+
+```sh
+docker volume create ssh_key_data
+```
+
+```sh
+docker run --rm -v ssh_key_data:/data -v ~/.ssh/id_ed25519:/tmp/id_ed25519 alpine:3 /bin/sh -c 'cp /tmp/id_ed25519 /data && chmod 600 /data/id_ed25519'
+```
+
+```sh
+docker run -it --rm -v ssh_key_data:/data alpine:3 sh
 ```
 
 ## Use ssh key in the volume
