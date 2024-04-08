@@ -17,8 +17,8 @@ services:
     ports:
       - '9000:9000'
     environment:
-      MINIO_ACCESS_KEY: root
-      MINIO_SECRET_KEY: 1234
+      MINIO_ACCESS_KEY: 'AKIAIOSFODNN7EXAMPLE'
+      MINIO_SECRET_KEY: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
     restart: unless-stopped
 
 volumes:
@@ -72,7 +72,7 @@ mc --autocompletion
 ### Upload a file
 
 ```sh
-mc alias set s3 http://localhost:9000 root 1234
+mc alias set local http://localhost:9000 'AKIAIOSFODNN7EXAMPLE' 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
 ```
 
 ```sh
