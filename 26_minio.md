@@ -19,8 +19,9 @@ services:
     ports:
       - '9000:9000'
     environment:
-      MINIO_ACCESS_KEY: 'AKIAIOSFODNN7EXAMPLE'
-      MINIO_SECRET_KEY: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+      MINIO_ROOT_USER: 'root'
+      MINIO_ROOT_PASSWORD: '12345678'
+    command: server /data --console-address ":9001"
     restart: unless-stopped
 
 volumes:
@@ -74,7 +75,7 @@ mc --autocompletion
 ### Upload a file
 
 ```sh
-mc alias set local http://localhost:9000 'AKIAIOSFODNN7EXAMPLE' 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+mc alias set local http://localhost:9000 root 12345678
 ```
 
 ```sh
