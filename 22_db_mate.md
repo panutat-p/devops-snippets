@@ -19,6 +19,8 @@ dbmate --version
 
 ### Docker
 
+https://ghcr.io/amacneil/dbmate
+
 https://hub.docker.com/r/amacneil/dbmate
 
 ## Run by ENV variables
