@@ -7,18 +7,26 @@ https://github.com/amacneil/dbmate
 ### Homebrew
 
 ```sh
+brew install mysql-client
+export PATH=$PATH:/opt/homebrew/opt/mysql-client/bin
+mysqldump --version
+```
+
+```sh
 brew install dbmate
+dbmate --version
 ```
 
 ### Docker
 
 https://hub.docker.com/r/amacneil/dbmate
 
-## Guide
+## Run by ENV variables
 
 ```sh
 export DATABASE_URL='mysql://root:1234@localhost:3306/poc'
 export DBMATE_MIGRATIONS_DIR=$HOME/compose/poc
+export DBMATE_SCHEMA_FILE=$HOME/compose/poc/schema.sql
 ```
 
 ```sh
@@ -56,6 +64,8 @@ dbmate up
 dbmate rollback
 ```
 
+## Run by options
+
 ```sh
-dbmate -u 'mysql://root:1234@localhost:3306/poc' --d ~/compose/poc up
+dbmate -u 'mysql://root:1234@localhost:3306/poc' -d ~/compose/poc up -s ~/compose/poc
 ```
