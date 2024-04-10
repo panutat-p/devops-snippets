@@ -74,7 +74,7 @@ qemu-system-aarch64 -cpu help
 ```
 
 ```sh
-colima start --cpu 4 --memory 8 --very-verbose
+colima start --cpu 4 --memory 8 --network-address --very-verbose
 ```
 
 ```sh
