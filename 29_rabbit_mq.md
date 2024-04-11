@@ -20,4 +20,5 @@ services:
 
 volumes:
   rabbitmq_data:
+    external: true
 ```
