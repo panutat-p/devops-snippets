@@ -26,49 +26,6 @@ Close the task by SIGKILL
 kill -9 $(lsof -t -i:8080)
 ```
 
-Functions
-```sh
-alias listport='lsof -P -n -i | grep LISTEN'
-
-killport() {
-  if [ $# -eq 0 ]; then
-    echo "Usage: killport port1 [port2 port3 ...]"
-    return 1
-  fi
-
-  for port in "$@"; do
-    pids=$(lsof -t -i:$port)
-    if [ -n "$pids" ]; then
-      for pid in $pids; do
-        kill $pid
-        echo "Closed process $pid on port $port"
-      done
-    else
-      echo "No process running on port $port"
-    fi
-  done
-}
-
-forcekillport() {
-  if [ $# -eq 0 ]; then
-    echo "Usage: killport port1 [port2 port3 ...]"
-    return 1
-  fi
-
-  for port in "$@"; do
-    pids=$(lsof -t -i:$port)
-    if [ -n "$pids" ]; then
-      for pid in $pids; do
-        kill -9 $pid
-        echo "Closed process $pid on port $port"
-      done
-    else
-      echo "No process running on port $port"
-    fi
-  done
-}
-```
-
 ## ip
 
 Show all network interfaces IP address

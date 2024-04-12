@@ -57,4 +57,51 @@ kconfig() {
 ksecret() {
   kubectl get secret $1 -o json | jq -r '.data | to_entries[] | .key + ": " + (.value | @base64d)'
 }
+
+listport() {
+  if [ $# -eq 0 ]
+  then
+    lsof -P -n -i
+  else
+    lsof -P -n -i | grep $1
+  fi
+}
+
+killport() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: killport port1 [port2 port3 ...]"
+    return 1
+  fi
+
+  for port in "$@"; do
+    pids=$(lsof -t -i:$port)
+    if [ -n "$pids" ]; then
+      for pid in $pids; do
+        kill $pid
+        echo "Closed process $pid on port $port"
+      done
+    else
+      echo "No process running on port $port"
+    fi
+  done
+}
+
+forcekillport() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: killport port1 [port2 port3 ...]"
+    return 1
+  fi
+
+  for port in "$@"; do
+    pids=$(lsof -t -i:$port)
+    if [ -n "$pids" ]; then
+      for pid in $pids; do
+        kill -9 $pid
+        echo "Closed process $pid on port $port"
+      done
+    else
+      echo "No process running on port $port"
+    fi
+  done
+}
 ```
