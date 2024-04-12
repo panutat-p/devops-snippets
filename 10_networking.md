@@ -1,33 +1,7 @@
 # Networking
 
-```shell
-apt install net-tools
-```
-
-```shell
-netstat --version
-```
-
-## ip
-
-Show all network interfaces IP address
-```shell
-ip a
-```
-
-Show a specific network interface IP address
-```shell
-ip a show eth0
-```
-
-Show all network interface MAC address
-```shell
-ip link show
-```
-
-Show the routing table
 ```sh
-ip r
+apt install net-tools
 ```
 
 ## Port number
@@ -52,21 +26,50 @@ Close the task by SIGKILL
 kill -9 $(lsof -t -i:8080)
 ```
 
-https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux
+Functions
+```sh
+alias listport='lsof -P -n -i | grep LISTEN'
 
-List all open ports
-```shell
-netstat -lntu
+killport() {
+  if [ $# -eq 0 ]; then
+    echo "Usage: killport port1 [port2 port3 ...]"
+    return 1
+  fi
+
+  for port in "$@"; do
+    pids=$(lsof -t -i:$port)
+    if [ -n "$pids" ]; then
+      for pid in $pids; do
+        kill $pid
+        echo "Closed process $pid on port $port"
+      done
+    else
+      echo "No process running on port $port"
+    fi
+  done
+}
 ```
 
-Check specific port number
+## ip
+
+Show all network interfaces IP address
 ```shell
-netstat -na | grep :4000
+ip a
 ```
 
-Allow specific port number
+Show a specific network interface IP address
 ```shell
-sudo ufw allow 4000
+ip a show eth0
+```
+
+Show all network interface MAC address
+```shell
+ip link show
+```
+
+Show the routing table
+```sh
+ip r
 ```
 
 ## Routing table
@@ -89,4 +92,23 @@ netstat -ant
 To list services, their current state, and their corresponding ports
 ```
 netstat -pnltu
+```
+
+## DigitalOcean Guide
+
+https://www.digitalocean.com/community/tutorials/opening-a-port-on-linux
+
+List all open ports
+```shell
+netstat -lntu
+```
+
+Check specific port number
+```shell
+netstat -na | grep :4000
+```
+
+Allow specific port number
+```shell
+sudo ufw allow 4000
 ```
