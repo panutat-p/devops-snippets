@@ -101,11 +101,32 @@ Create a new branch from revision hash
 git checkout -b feat/v1 revision_hash f668219
 ```
 
+## Stash
+
+```sh
+git stash --all
+```
+
+```sh
+git stash list
+```
+
+```sh
+git stash apply 
+```
+
 ## Clear
+
+https://stackoverflow.com/a/42903805
 
 Discard uncommitted local changes
 ```sh
 git restore .
+```
+
+Discard all local changes
+```sh
+git reset --hard
 ```
 
 Delete uncommitted files

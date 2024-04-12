@@ -25,6 +25,10 @@ https://github.com/romkatv/powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 ```
 
+```sh
+p10k configure
+```
+
 ### Auto suggestions
 
 https://github.com/zsh-users/zsh-autosuggestions
@@ -147,7 +151,27 @@ gh extension upgrade gh-copilot
 ```
 
 ```sh
-gh copilot explain 'go programming'
+echo 'eval "$(gh copilot alias -- zsh)"' >> ~/.zshrc
+```
+
+```sh
+ghce 'go programming'
+```
+
+```sh
+ghcs 'list running port numbers in MacOS'
+```
+
+```sh
+ghcs -t git 'delete files/dirs that are not tracked'
+```
+
+```sh
+ghcs -t git 'discard all local changes'
+```
+
+```sh
+ghcs -t git 'discard all local changes'
 ```
 
 ## AWS
