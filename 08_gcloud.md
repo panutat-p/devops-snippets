@@ -14,30 +14,16 @@ apt update
 apt install -y google-cloud-cli
 ```
 
-MacOS Intel
-```sh
-wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-x86_64.tar.gz
-```
-
 MacOS ARM
 ```sh
-wget -O gcloud.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-470.0.0-darwin-arm.tar.gz
-```
-
-```sh
+wget -O gcloud.tar.gz 'https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-471.0.0-darwin-arm.tar.gz'
 tar -C $HOME -xvf gcloud.tar.gz
-```
-
-```sh
 ./$HOME/google-cloud-sdk/install.sh
-```
-
-```sh
 gcloud init
 ```
 
 ```sh
-export CLOUDSDK_PYTHON=python3.11
+export CLOUDSDK_PYTHON=python3.12
 ```
 
 ## IAM
