@@ -4,7 +4,21 @@ https://hub.docker.com/_/caddy
 
 ## Install
 
-https://caddyserver.com/docs/install#debian-ubuntu-raspbian
+https://caddyserver.com/docs/install
+
+Ubuntu
+```sh
+apt install -y debian-keyring debian-archive-keyring apt-transport-https
+curl -1SL 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | gpg --dearmor -o /usr/share/keyrings/caddy-stable-archive-keyring.gpg
+curl -1SL 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | tee /etc/apt/sources.list.d/caddy-stable.list
+apt update
+apt install -y  caddy
+```
+
+MacOS
+```sh
+brew install caddy
+```
 
 ## Config
 
