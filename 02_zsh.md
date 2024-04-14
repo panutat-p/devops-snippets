@@ -1,5 +1,42 @@
 # zsh
 
+## OH MY ZSH
+
+https://ohmyz.sh/#install
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+### Theme: power level 10k
+
+https://github.com/romkatv/powerlevel10k
+
+```sh
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
+```
+
+```sh
+p10k help
+```
+
+### Auto suggestions
+
+https://github.com/zsh-users/zsh-autosuggestions
+
+```sh
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
+### Instant prompt
+
+https://github.com/romkatv/powerlevel10k/blob/master/README.md#instant-prompt
+
+```bash
+cat .p10k.zsh
+```
+
 ## `.zshrc`
 
 ```zsh
@@ -111,40 +148,4 @@ forcekillport() {
     fi
   done
 }
-```
-
-## OH MY ZSH
-
-https://ohmyz.sh/#install
-
-```sh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-### Theme: power level 10k
-
-https://github.com/romkatv/powerlevel10k
-
-```sh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-```
-
-```sh
-p10k configure
-```
-
-### Auto suggestions
-
-https://github.com/zsh-users/zsh-autosuggestions
-
-```sh
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-```
-
-### Instant prompt
-
-https://github.com/romkatv/powerlevel10k/blob/master/README.md#instant-prompt
-
-```bash
-cat .p10k.zsh
 ```

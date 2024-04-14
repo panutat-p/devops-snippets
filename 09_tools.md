@@ -17,8 +17,6 @@ MacOS
 ```sh
 brew install go-task
 wget -O /usr/local/share/zsh/site-functions/_task https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task
-echo 'autoload -U compinit' >> ~/.zshrc
-echo 'compinit -i' >> ~/.zshrc
 ```
 
 ## GitHub CLI
