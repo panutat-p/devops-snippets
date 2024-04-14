@@ -1,21 +1,33 @@
 # bash
 
-`~/.bashrc`
+## Basic
+
+```sh
+apt update
+apt upgrade -y
+```
+
+```sh
+apt install -y bash-completion lsb-release gpg gnupg apt-transport-https ca-certificates
+apt install -y jq yq bzip2 alien curl wget git
+```
+
+## `~/.bashrc`
+
 ```bash
-# shell variables
+# Shell variables
 
 # ENV variables
 export EDITOR=nano
 export KUBE_EDITOR=nano
 export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
-export AWS_PROFILE=dev
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-export CLOUDSDK_PYTHON=python3.11
-
-# PATH
 export PATH=$PATH:/usr/local/go/bin
 
-# aliases, a full list of active aliases, run `alias`.
+# Sources
+source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
+
+# Aliases
 alias l='ls -laF'
 alias ll='ls -lF'
 alias gitlog='git log --graph --oneline --decorate'
@@ -25,11 +37,6 @@ alias kga='kubectl get pod,service,deployment,job,cronjob,replicaset,statefulset
 alias d='docker'
 alias dcl='docker container ls -a'
 alias dcr='docker rm -f $(docker ps -aq)'
-
-# sources
-source ~/.taskfile.bash
-source <(kubectl completion bash)
-complete -o default -F __start_kubectl k
 
 # functions
 enc() {
