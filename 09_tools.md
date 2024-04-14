@@ -4,23 +4,21 @@
 
 https://taskfile.dev/installation
 
-```sh
-sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
-```
-
 https://taskfile.dev/installation/#setup-completions
 
 Ubuntu
 ```sh
+sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
 wget -O /etc/task_completion.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
-```
-```sh
-source /etc/task_completion.bash
+echo 'source /etc/task_completion.bash' >> ~/.bashrc
 ```
 
 MacOS
 ```sh
+brew install go-task
 wget -O /usr/local/share/zsh/site-functions/_task https://raw.githubusercontent.com/go-task/task/main/completion/zsh/_task
+echo 'autoload -U compinit' >> ~/.zshrc
+echo 'compinit -i' >> ~/.zshrc
 ```
 
 ## GitHub CLI
