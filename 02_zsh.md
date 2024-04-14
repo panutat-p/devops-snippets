@@ -21,11 +21,19 @@ echo 'ZSH_THEME="powerlevel10k/powerlevel10k"' >> ~/.zshrc
 p10k help
 ```
 
-### Amazon Code
+### Amazon CodeWhisperer
 
 ```
 wget -O code_whisperer.dmg 'https://desktop-release.codewhisperer.us-east-1.amazonaws.com/latest/CodeWhisperer.dmg'
 open code_whisperer.dmg
+```
+
+```sh
+cw -h
+```
+
+```sh
+cw integrations install input-method
 ```
 
 ### Auto suggestions
