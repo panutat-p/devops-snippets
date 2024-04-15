@@ -47,6 +47,7 @@ apt install -y nodejs
 ```sh
 npm i -g npm@latest
 npm i -g typescript
+npm i -g tsx
 npm i -g ts-node
 npm i -g vite-node
 ```
