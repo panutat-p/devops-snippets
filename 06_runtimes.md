@@ -84,4 +84,14 @@ open java21.pkg
 
 ## bun
 
+MacOS
+```sh
+brew install oven-sh/bun/bun
+```
+
+```sh
+bun upgrade
+bun --version
+```
+
 ## Python

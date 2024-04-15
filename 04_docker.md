@@ -1,5 +1,13 @@
 # Docker
 
+https://stackoverflow.com/a/72784095
+
+If you had recently deleted Docker, you have to manually recreate the Docker folder
+```sh
+mkdir -p /Applications/Docker.app/Contents/Resources/cli-plugins
+brew cleanup
+```
+
 ## Colima
 
 ```sh
