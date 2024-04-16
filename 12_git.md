@@ -18,9 +18,17 @@ git config --global url.'https://username:token@gitlab.com/'.insteadOf 'https://
 ## Init repo
 
 ```sh
+git remote rm origin
+```
+
+```sh
 git remote add origin https://github.com/user/repo.git
 git branch -M main
 git push -u origin main
+```
+
+```sh
+git remote -v
 ```
 
 ## Download
