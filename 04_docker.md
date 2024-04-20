@@ -124,6 +124,14 @@ docker container ls -a
 docker image ls
 ```
 
+```sh
+docker container exec -it ${CONTAINER_ID} sh
+```
+
+* -i (or --interactive) keeps STDIN open even if not attached. Allows you to provide input to the container
+
+* -t (or --tty) allocates a pseudo-TTY. This means that it simulates a real terminal
+
 Remove stopped containers
 ```sh
 docker container prune -f
