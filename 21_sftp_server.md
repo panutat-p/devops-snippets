@@ -28,6 +28,10 @@ volumes:
 ```
 
 ```sh
+rm ~/.ssh/known_hosts
+```
+
+```sh
 sftp -P 2222 admin@localhost
 ```
 
