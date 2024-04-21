@@ -14,6 +14,11 @@ brew cleanup
 brew install colima
 ```
 
+```sh
+export EDITOR=nano
+colima template
+```
+
 List available CPUs
 ```sh
 qemu-system-aarch64 -cpu help
