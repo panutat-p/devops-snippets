@@ -19,8 +19,14 @@ List available CPUs
 qemu-system-aarch64 -cpu help
 ```
 
+Mac Intel
 ```sh
 colima start --cpu 4 --memory 8 --network-address --very-verbose
+```
+
+Mac M1
+```sh
+colima start --arch aarch64 --vm-type=vz --vz-rosetta --cpu 4 --memory 8 --network-address --very-verbose
 ```
 
 ```sh
