@@ -38,13 +38,13 @@ colima stop --force
 ```
 
 ```sh
-colima delete
+colima delete --force
 ```
 
 ## Docker
 
 ```sh
-brew install docker
+brew install docker docker-completion
 ```
 
 ## Docker plugins
