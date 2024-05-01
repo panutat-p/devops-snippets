@@ -9,6 +9,7 @@ git config --global user.name '__'
 git config --global user.email '__'
 git config --global init.defaultBranch 'main'
 git config --global pull.rebase 'true'
+git config --global rebase.autoStash 'true'
 ```
 
 ```sh
@@ -43,6 +44,14 @@ git clone https://github.com/skills/introduction-to-github.git intro_to_github
 
 ```sh
 git fetch
+```
+
+```sh
+git pull
+```
+
+```sh
+git pull --rebase
 ```
 
 List local branches
