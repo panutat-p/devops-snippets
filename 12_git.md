@@ -13,6 +13,10 @@ git config --global rebase.autoStash 'true'
 ```
 
 ```sh
+git config --global url.'https://token@github'.insteadOf 'https://github'
+```
+
+```sh
 git config --global url.'https://username:token@gitlab.com/'.insteadOf 'https://gitlab.com/'
 ```
 
