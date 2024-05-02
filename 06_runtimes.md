@@ -72,13 +72,19 @@ export PATH=$PATH:/usr/local/bin/npm
 
 Ubuntu
 ```sh
-wget -O java21.deb 'https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb'
+wget -O java21.deb https://corretto.aws/downloads/latest/amazon-corretto-21-x64-linux-jdk.deb
 dpkg -i java21.deb
+```
+
+MacOS x64
+```sh
+wget -O java21.pkg https://corretto.aws/downloads/latest/amazon-corretto-21-x64-macos-jdk.pkg
+open java21.pkg
 ```
 
 MacOS ARM
 ```sh
-wget -O java21.pkg 'https://corretto.aws/downloads/latest/amazon-corretto-21-aarch64-macos-jdk.pkg'
+wget -O java21.pkg https://corretto.aws/downloads/latest/amazon-corretto-21-aarch64-macos-jdk.pkg
 open java21.pkg
 ```
 
