@@ -1,5 +1,17 @@
 # Linux Commands
 
+## stdout
+
+Show available disk space & write/overwrite to a file
+```sh
+df -h | tee disk_usage.txt
+```
+
+Show available disk space & append to a file
+```sh
+df -h | tee -a file.out
+```
+
 ## PATH
 
 ```shell
