@@ -51,7 +51,6 @@ dec() {
 
 hash() {
   echo -n "$1" | sha256sum
-  echo
 }
 
 kn() {
