@@ -49,6 +49,11 @@ dec() {
   echo
 }
 
+hash() {
+  echo -n "$1" | sha256sum
+  echo
+}
+
 kn() {
   [ "$1" ] && kubectl config set-context --current --namespace $1 || kubectl config view --minify | grep namespace
 }
