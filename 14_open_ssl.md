@@ -55,3 +55,22 @@ dec() {
   echo
 }
 ```
+
+## Encryption key in CFB mode
+
+```sh
+export ENCRYPTION_KEY='5598e3d8a6d44fe2fdb91bae21d4d5f5716ce138e05dd30fc58935c752c0a07c'
+
+enc() {
+  IV=$(openssl rand -hex 16)
+  echo -n "$1" | openssl enc -aes-256-cfb -a -K $ENCRYPTION_KEY -iv $IV | echo -n "$IV$(cat)"
+  echo
+}
+
+dec() {
+  IV=${1:0:32}
+  CIPHERTEXT=${1:32}
+  echo "$CIPHERTEXT" | openssl enc -aes-256-cfb -a -d -K $ENCRYPTION_KEY -iv $IV
+  echo
+}
+```
