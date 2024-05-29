@@ -17,9 +17,25 @@ Generate 256-bit key
 openssl rand -hex 32
 ```
 
+Generate 256-bit key
+```sh
+openssl rand -base64 32
+```
+
 Generate initialization vector
 ```sh
 openssl rand -hex 16
+```
+
+## Hash SHA512
+
+```sh
+export HASH_SALT='s0mcjpMvFTRRiDw5WWtEIMpjmntGlxKa3T4JMdwdQ8U='
+
+hash() {
+  echo -n "$1$HASH_SALT" | openssl dgst -sha512 -binary | openssl base64 -A
+  echo
+}
 ```
 
 ## Passphrase in CBC mode
