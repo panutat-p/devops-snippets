@@ -10,21 +10,16 @@ MacOS
 brew install openssl@3
 ```
 
-## Generate hex keys
+## Generate keys
 
-Generate 256-bit key
+hex
 ```sh
 openssl rand -hex 32
 ```
 
-Generate 256-bit key
+base64
 ```sh
 openssl rand -base64 32
-```
-
-Generate initialization vector
-```sh
-openssl rand -hex 16
 ```
 
 ## Hash SHA512
