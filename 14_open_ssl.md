@@ -33,7 +33,8 @@ openssl rand -hex 16
 export HASH_SALT='s0mcjpMvFTRRiDw5WWtEIMpjmntGlxKa3T4JMdwdQ8U='
 
 hash() {
-  echo -n "$1$HASH_SALT" | openssl dgst -sha512 -binary | openssl base64 -A
+  DECODED_SALT=$(echo "$HASH_SALT" | base64 --decode)
+  echo -n "$1$DECODED_SALT" | openssl dgst -sha512 -binary | openssl base64 -A
   echo
 }
 ```
