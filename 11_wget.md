@@ -25,7 +25,7 @@ wget -q -O /dev/stdout https://example.com
 
 Download file
 ```sh
-wget -O go.tar.gz https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+wget -O go.tar.gz https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
 ```
 
 Download mirror of a website
@@ -35,5 +35,5 @@ wget -m https://example.com
 
 Resume the download
 ```sh
-wget -c https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+wget -c https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
 ```

@@ -49,7 +49,7 @@ curl https://gorest.co.in/public/v2/users \
 ## Download
 
 ```shell
-curl -O https://go.dev/dl/go1.22.0.linux-amd64.tar.gz
+curl -O https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
 ```
 
 ```shell
