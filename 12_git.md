@@ -17,7 +17,7 @@ git config --global url.'https://token@github'.insteadOf 'https://github'
 ```
 
 ```sh
-git config --global url.'https://username:token@gitlab.com/'.insteadOf 'https://gitlab.com/'
+git config --global url.'https://username:token@gitlab.com'.insteadOf 'https://gitlab.com'
 ```
 
 ## Init repo
@@ -36,32 +36,7 @@ git push -u origin main
 git remote -v
 ```
 
-## Download
-
-```sh
-git clone -b main https://github.com/skills/introduction-to-github.git
-```
-
-```sh
-git clone https://github.com/skills/introduction-to-github.git intro_to_github
-```
-
-```sh
-git fetch
-```
-
-```sh
-git pull
-```
-
-```sh
-git pull --rebase
-```
-
-List local branches
-```sh
-git branch
-```
+## Branch
 
 List remote branches
 ```sh
@@ -158,6 +133,33 @@ git clean -fd
 Removes the file from the index but leaves it in the working directory
 ```sh
 git rm --cached .DS_Store
+```
+
+## Download
+
+```sh
+git clone -b main https://github.com/skills/introduction-to-github.git
+```
+
+```sh
+git clone https://github.com/skills/introduction-to-github.git intro_to_github
+```
+
+```sh
+git fetch
+```
+
+```sh
+git pull
+```
+
+```sh
+git pull --rebase
+```
+
+List local branches
+```sh
+git branch
 ```
 
 ## Upload
