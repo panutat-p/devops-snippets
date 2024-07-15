@@ -172,6 +172,16 @@ git commit -m "feat: update README.md"
 git push -u origin feat/v1
 ```
 
+## Rebase
+
+```sh
+git rebase main
+```
+
+```sh
+git rebase -i main
+```
+
 ## GitHub CLI
 
 https://docs.github.com/en/copilot/github-copilot-in-the-cli/using-github-copilot-in-the-cli
