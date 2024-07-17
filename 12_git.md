@@ -99,6 +99,17 @@ git checkout -b feat/v1 revision_hash f668219
 
 ## Stash
 
+Stash only tracked files
+```sh
+git stash
+```
+
+Stash both tracked and untracked files (`-u` is `--include-untracked`)
+```sh
+git stash -u
+```
+
+Stash everything including ignored files
 ```sh
 git stash --all
 ```
@@ -108,7 +119,31 @@ git stash list
 ```
 
 ```sh
-git stash apply 
+git stash apply
+```
+
+Apply and remove the top item
+```sh
+git stash pop
+```
+
+```sh
+git stash apply stash@{1}
+```
+
+Remove top item in stash
+```sh
+git stash drop
+```
+
+Remove specific item in stash
+```sh
+git stash drop stash@{1}
+```
+
+Remove all items in stash
+```sh
+git stash clear
 ```
 
 ## Clear
@@ -231,5 +266,5 @@ ghcs -t git 'discard all local changes'
 ```
 
 ```sh
-ghcs -t git 'discard all local changes'
+ghcs -t git 'list stash, apply specific stash then delete it'
 ```
