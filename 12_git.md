@@ -34,9 +34,6 @@ git config --list --local
 
 ```sh
 git remote rm origin
-```
-
-```sh
 git remote add origin https://github.com/user/repo.git
 git branch -M main
 git push -u origin main
