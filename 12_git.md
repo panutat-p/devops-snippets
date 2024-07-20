@@ -100,12 +100,17 @@ git branch -d feat/v1
 
 Checkout at the revision hash
 ```sh
-git switch --detach aaaaa01
+git switch -d 772952b
 ```
 
 Create a new branch from revision hash
 ```sh
-git switch -c feat/v1 aaaaa01
+git switch -c feat/v1 772952b
+```
+
+Return to the previous branch
+```sh
+git switch -
 ```
 
 ## Stash
