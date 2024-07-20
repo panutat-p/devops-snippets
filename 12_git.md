@@ -166,19 +166,24 @@ git stash clear
 
 https://stackoverflow.com/a/42903805
 
-Discard uncommitted local changes
+Unstage changes
+```sh
+git restore --staged .
+```
+
+Discard unstaged changes
 ```sh
 git restore .
 ```
 
-Discard all local changes
-```sh
-git reset --hard
-```
-
-Delete uncommitted files
+Delete untracked files
 ```sh
 git clean -fd
+```
+
+Discard staged changes
+```sh
+git reset --hard
 ```
 
 Removes the file from the index but leaves it in the working directory
