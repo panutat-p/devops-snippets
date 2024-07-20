@@ -181,7 +181,7 @@ Delete untracked files
 git clean -fd
 ```
 
-Discard staged changes
+Discard both unstaged chagnes and staged changes
 ```sh
 git reset --hard
 ```
