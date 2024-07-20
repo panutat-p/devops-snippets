@@ -2,7 +2,7 @@
 
 https://stackoverflow.com/a/70454786
 
-## Set up
+## Config
 
 ```sh
 git config --global user.name '__'
@@ -20,7 +20,17 @@ git config --global url.'https://token@github'.insteadOf 'https://github'
 git config --global url.'https://username:token@gitlab.com'.insteadOf 'https://gitlab.com'
 ```
 
-## Init repo
+Show global git config
+```sh
+git config --list --global
+```
+
+Show git config of current repository
+```sh
+git config --list --local
+```
+
+## Remote
 
 ```sh
 git remote rm origin
@@ -63,11 +73,14 @@ Create a new branch from the remote branch
 git switch -c feat/v2 /origin/main
 ```
 
-## Manage
-
-Rename current branch
+Rename branch
 ```sh
-git branch -m new-branch-name
+git branch -m feat/v3
+```
+
+Rename branch forcefully
+```sh
+git branch -M feat/v3
 ```
 
 Delete local branch
@@ -210,7 +223,8 @@ git push -u origin feat/v1
 ## Rebase
 
 ```sh
-git rebase main
+git fetch origin
+git rebase origin/main
 ```
 
 ```sh
