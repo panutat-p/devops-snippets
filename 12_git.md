@@ -46,6 +46,16 @@ git push -u origin main
 git remote -v
 ```
 
+## View
+
+```sh
+git status
+```
+
+```sh
+git log --graph --oneline --decorate
+```
+
 ## Branch
 
 List remote branches
@@ -88,26 +98,14 @@ Delete local branch
 git branch -d feat/v1
 ```
 
-## History
-
-```sh
-git status
-```
-
-```sh
-git log --graph --oneline --decorate
-```
-
-## Checkout
-
 Checkout at the revision hash
 ```sh
-git checkout revision_hash
+git switch --detach aaaaa01
 ```
 
 Create a new branch from revision hash
 ```sh
-git checkout -b feat/v1 revision_hash f668219
+git switch -c feat/v1 aaaaa01
 ```
 
 ## Stash
