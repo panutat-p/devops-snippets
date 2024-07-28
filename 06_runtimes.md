@@ -90,6 +90,11 @@ open java21.pkg
 
 ## bun
 
+Linux
+```sh
+curl -fsSL https://bun.sh/install | bash
+```
+
 MacOS
 ```sh
 brew install oven-sh/bun/bun
