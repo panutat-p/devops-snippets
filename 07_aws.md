@@ -29,6 +29,16 @@ aws configure --profile dev
 ```
 
 ```sh
+export AWS_PROFILE=local
+aws configure set output yaml
+aws configure set region ap-southeast-1
+aws configure set aws_access_key_id admin
+aws configure set aws_secret_access_key 12345678
+aws configure set s3.signature_version s3v4
+aws configure set s3.endpoint_url http://localhost:9000
+```
+
+```sh
 cat ~/.aws/config
 ```
 
