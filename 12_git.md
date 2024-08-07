@@ -221,6 +221,11 @@ git branch
 git commit -m "feat: update README.md"
 ```
 
+Rename commit message
+```sh
+git commit --amend -m 'business-date'
+```
+
 ```sh
 git push -u origin feat/v1
 ```
