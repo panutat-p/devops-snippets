@@ -1,5 +1,12 @@
 # Linux Commands
 
+## directory
+
+Go back to previous directory
+```sh
+cd -
+```
+
 ## stdout
 
 Show available disk space & write/overwrite to a file
