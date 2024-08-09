@@ -29,11 +29,11 @@ https://gorest.co.in
 
 ## Basic
 
-```shell
+```sh
 curl -i https://gorest.co.in/public/v2/users
 ```
 
-```shell
+```sh
 curl -L http://google.com
 ```
 
@@ -48,25 +48,25 @@ curl https://gorest.co.in/public/v2/users \
 
 ## Download
 
-```shell
+```sh
 curl -O https://go.dev/dl/go1.22.4.linux-amd64.tar.gz
 ```
 
-```shell
+```sh
 curl -o go.tar.gz -L https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
 ```
 
 ## RESTful API
 
-```shell
+```sh
 curl -X GET https://gorest.co.in/public/v2/users
 ```
 
-```shell
+```sh
 curl -X POST https://gorest.co.in/public/v2/users
 ```
 
-```shell
+```sh
 curl -X POST https://gorest.co.in/public/v2/users \
   -H "Accept: application/json" \
   -H "Content-Type: application/json" \
