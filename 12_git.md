@@ -39,8 +39,19 @@ git branch -M main
 git push -u origin main
 ```
 
+List remote hosts
 ```sh
 git remote -v
+```
+
+View branch config
+```sh
+git branch -vv
+```
+
+Set the upstream of the current branch
+```sh
+git branch -u origin/main
 ```
 
 ## View
