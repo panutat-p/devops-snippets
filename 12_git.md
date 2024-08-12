@@ -210,20 +210,8 @@ git clone https://github.com/skills/introduction-to-github.git intro_to_github
 ```
 
 ```sh
-git fetch
-```
-
-```sh
-git pull
-```
-
-```sh
-git pull --rebase
-```
-
-List local branches
-```sh
-git branch
+git fetch origin
+git reset --hard origin/dev
 ```
 
 ## Upload
