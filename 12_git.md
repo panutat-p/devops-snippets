@@ -76,6 +76,12 @@ List all branches
 git branch -a
 ```
 
+Force pull
+```sh
+git fetch origin
+git reset --hard origin/feat/v1
+```
+
 Checkout local or remote branch
 ```sh
 git switch feat/v1
@@ -207,11 +213,6 @@ git clone -b main https://github.com/skills/introduction-to-github.git
 
 ```sh
 git clone https://github.com/skills/introduction-to-github.git intro_to_github
-```
-
-```sh
-git fetch origin
-git reset --hard origin/dev
 ```
 
 ## Upload
