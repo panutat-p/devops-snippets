@@ -10,6 +10,7 @@ git config --global user.email '__'
 git config --global init.defaultBranch 'main'
 git config --global pull.rebase 'true'
 git config --global rebase.autoStash 'true'
+git config --global pager.branch 'false'
 ```
 
 ```sh
@@ -28,6 +29,13 @@ git config --list --global
 Show git config of current repository
 ```sh
 git config --list --local
+```
+
+Multiple remote
+`.gitconfig`
+```
+[includeIf "gitdir:~/github/"]
+    path = ~/github/.gitconfig
 ```
 
 ## Remote
