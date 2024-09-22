@@ -226,6 +226,18 @@ git clone https://github.com/skills/introduction-to-github.git intro_to_github
 ## Upload
 
 ```sh
+git add .
+```
+
+```sh
+git add go.*
+```
+
+```sh
+git add -f .env
+```
+
+```sh
 git commit -m "feat: update README.md"
 ```
 
