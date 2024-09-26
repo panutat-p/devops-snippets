@@ -92,7 +92,6 @@ complete -o default -F __start_kubectl k
 # Aliases
 alias l='ls -laF'
 alias ll='ls -lF'
-alias gitlog='git log --graph --oneline --decorate'
 alias k='kubectl'
 alias kcontext='kubectl config get-contexts'
 alias kga='kubectl get pod,service,deployment,job,cronjob,replicaset,statefulset,configmap,secret,ingress'
@@ -129,6 +128,14 @@ kconfig() {
 
 ksecret() {
   kubectl get secret $1 -o json | jq -r '.data | to_entries[] | .key + ": " + (.value | @base64d)'
+}
+
+gitlog() {
+  git log --graph --oneline --decorate "$@"
+}
+
+gitb() {
+  git branch "$@"
 }
 
 listport() {
