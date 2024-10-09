@@ -6,7 +6,7 @@ https://go.dev/doc/install
 
 ```sh
 rm -rf /usr/local/go
-wget -O go.tar.gz https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+wget -O go.tar.gz https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
 tar -C /usr/local -xvf go.tar.gz
 ```
 
