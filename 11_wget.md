@@ -25,7 +25,7 @@ wget -q -O /dev/stdout https://example.com
 
 Download file
 ```sh
-wget -O go.tar.gz https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
+wget -O task.bash https://raw.githubusercontent.com/go-task/task/main/completion/bash/task.bash
 ```
 
 Download mirror of a website
