@@ -2,6 +2,8 @@
 
 ## Go
 
+### Ubuntu
+
 https://go.dev/doc/install
 
 ```sh
@@ -10,12 +12,16 @@ wget -O go.tar.gz https://go.dev/dl/go1.23.2.linux-amd64.tar.gz
 tar -C /usr/local -xvf go.tar.gz
 ```
 
-Ubuntu
 ```sh
 export PATH=$PATH:/usr/local/go/bin
 ```
 
-MacOS
+### MacOS
+
+```sh
+brew install go
+```
+
 ```sh
 export PATH=$PATH:$HOME/go/bin
 ```
