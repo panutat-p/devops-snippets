@@ -25,11 +25,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/cli-authentication-user.html
 https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
 
 ```sh
-aws configure --profile dev
-```
-
-```sh
-export AWS_PROFILE=local
+echo 'export AWS_PROFILE=local' >> ~/.bashrc
 aws configure set output yaml
 aws configure set region ap-southeast-1
 aws configure set aws_access_key_id admin
@@ -52,9 +48,6 @@ aws configure list
 
 ```sh
 export AWS_PROFILE=dev
-```
-
-```sh
 aws sts get-caller-identity
 ```
 
