@@ -82,7 +82,7 @@ export ZSH="$HOME/.oh-my-zsh"
 export EDITOR=nano
 export KUBE_EDITOR=nano
 export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
-export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Sources
 source $ZSH/oh-my-zsh.sh
