@@ -21,7 +21,7 @@ apt install -y jq yq bzip2 alien curl wget git
 export EDITOR=nano
 export KUBE_EDITOR=nano
 export KUBECONFIG=${KUBECONFIG}:${HOME}/.kube/config
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 
 # Sources
 source <(kubectl completion bash)
