@@ -6,9 +6,14 @@ apt install net-tools
 
 ## Port number
 
-List all listening port numbers
+List files belonging to active processes
 ```sh
 lsof -P -n -i | grep LISTEN
+```
+
+List active processes
+```sh
+netstat -tunlp
 ```
 
 Check task that use port 8080
