@@ -12,6 +12,7 @@ git config --global pull.rebase 'true'
 git config --global rebase.autoStash 'true'
 git config --global pager.branch 'false'
 git config --global core.editor 'nano'
+git config --global alias.log1 'log --graph --oneline --decorate'
 ```
 
 Use Visual Studio Code
@@ -270,6 +271,10 @@ Edit past commits interactively
 ```sh
 git pull
 git rebase -i f893a71
+# Change pick to edit
+# Then edit the files
+git add .
+git rebase --continue
 ```
 
 ## GitHub CLI
