@@ -260,13 +260,18 @@ git push -u origin feat/v1
 
 ## Rebase
 
+https://www.youtube.com/watch?v=42392W7SgnE
+
+Move past commits forward
 ```sh
 git fetch origin
 git rebase origin/main
 ```
 
+Edit past commits interactively
 ```sh
-git rebase -i main
+git pull
+git rebase -i f893a71
 ```
 
 ## GitHub CLI
