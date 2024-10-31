@@ -11,12 +11,10 @@ git config --global init.defaultBranch 'main'
 git config --global pull.rebase 'true'
 git config --global rebase.autoStash 'true'
 git config --global pager.branch 'false'
-```
-
-```sh
 git config --global core.editor 'nano'
 ```
 
+Use Visual Studio Code
 ```sh
 git config --global core.editor 'code --wait'
 ```
