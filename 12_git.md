@@ -14,6 +14,14 @@ git config --global pager.branch 'false'
 ```
 
 ```sh
+git config --global core.editor 'nano'
+```
+
+```sh
+git config --global core.editor 'code --wait'
+```
+
+```sh
 git config --global url.'https://token@github'.insteadOf 'https://github'
 ```
 
