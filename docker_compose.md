@@ -38,3 +38,26 @@ services:
     command: tail -f /dev/null
     restart: on-failure
 ```
+
+## Database
+
+https://hub.docker.com/_/mysql
+
+```yaml
+services:
+
+  mysql8:
+    container_name: mysql8
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+    volumes:
+      - mysql8_data:/var/lib/mysql
+    restart: on-failure
+
+
+volumes:
+  mysql8_data:
+    driver: local
+    external: true
+```
