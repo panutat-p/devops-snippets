@@ -97,8 +97,8 @@ alias kcontext='kubectl config get-contexts'
 alias kga='kubectl get pod,service,deployment,job,cronjob,replicaset,statefulset,configmap,secret,ingress'
 alias d='docker'
 alias dcl='docker container ls -a'
-alias dcs='docker container stop $(docker ps -aq)'
-alias dcr='docker rm -f $(docker ps -aq)'
+alias dcs='docker container stop $(docker container ls -aq)'
+alias dcr='docker rm -f $(docker container ls -aq)'
 
 # Functions
 enc() {
