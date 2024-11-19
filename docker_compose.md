@@ -63,10 +63,10 @@ services:
   mysql8:
     container_name: mysql8
     image: mysql:8.4
-    environment:
-      MYSQL_ROOT_PASSWORD: 1234
     ports:
       - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - type: volume
         source: mysql8_data
@@ -88,11 +88,29 @@ services:
     command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
     restart: on-failure
 
+  mongodb8:
+    container_name: mongodb8
+    image: mongo:8
+    ports:
+      - '27017:27017'
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=1234
+      - MONGO_INITDB_DATABASE=demo
+      - MONGO_INITDB_USERNAME=admin
+      - MONGO_INITDB_PASSWORD=1234
+    volumes:
+      - type: volume
+        source: mongodb8_data
+        target: /data/db
+    restart: on-failure
+
+
 volumes:
   mysql8_data:
-    driver: local
     external: true
   redis7_data:
-    driver: local
+    external: true
+  mongodb8_data:
     external: true
 ```
