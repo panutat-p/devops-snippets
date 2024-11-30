@@ -97,8 +97,6 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=1234
       - MONGO_INITDB_DATABASE=demo
-      - MONGO_INITDB_USERNAME=admin
-      - MONGO_INITDB_PASSWORD=1234
     volumes:
       - type: volume
         source: mongodb8_data
