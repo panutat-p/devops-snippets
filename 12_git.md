@@ -97,6 +97,11 @@ git fetch origin
 git reset --hard origin/feat/v1
 ```
 
+Create a new branch that tracks the remote branch
+```sh
+git branch --track feat/v1 origin/feat/v1
+```
+
 Checkout local or remote branch
 ```sh
 git switch feat/v1
@@ -110,6 +115,12 @@ git switch -c feat/v1
 Create a new branch from the remote branch
 ```sh
 git switch -c feat/v2 /origin/main
+git push -u origin feat/v2
+```
+
+Clone a remote branch
+```sh
+git switch --track -c feat/v1 origin/feat/v1
 ```
 
 Rename branch
