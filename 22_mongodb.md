@@ -37,7 +37,6 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=1234
-      - MONGO_INITDB_DATABASE=demo
     volumes:
       - type: volume
         source: mongodb8_data
@@ -52,4 +51,9 @@ volumes:
 
 ```sh
 mongosh 'mongodb://root:1234@localhost/admin'
+```
+
+```js
+use demo
+db.fruit.insertOne({ name: "apple", color: "red", price: "50.50" })
 ```
