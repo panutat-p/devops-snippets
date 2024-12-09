@@ -14,7 +14,7 @@ https://hub.docker.com/r/prom/pushgateway
 services:
 
   grafana:
-    image: grafana/grafana:11.2.0
+    image: grafana/grafana:11.4.0
     ports:
       - '3000:3000'
     environment:
@@ -24,7 +24,7 @@ services:
       GF_INSTALL_PLUGINS: 'grafana-clock-panel,grafana-simple-json-datasource'
     volumes:
       - type: volume
-        source: grafana_data
+        source: grafana11_data
         target: /var/lib/grafana
     restart: unless-stopped
 
@@ -40,17 +40,17 @@ services:
       DOCKER_INFLUXDB_INIT_BUCKET: 'fruit'
     volumes:
       - type: volume
-        source: influxdb_data
+        source: influxdb2_data
         target: /var/lib/influxdb2
       - type: volume
-        source: influxdb_data
+        source: influxdb2_data
         target: /etc/influxdb2
     restart: unless-stopped
 
 
 volumes:
-  grafana_data:
+  grafana11_data:
     external: true
-  influxdb_data:
+  influxdb2_data:
     external: true
 ```
