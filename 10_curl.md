@@ -49,11 +49,11 @@ curl https://gorest.co.in/public/v2/users \
 ## Download
 
 ```sh
-curl -O https://go.dev/dl/go1.23.3.linux-amd64.tar.gz
+curl -O https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
 ```
 
 ```sh
-curl -o go.tar.gz -L https://go.dev/dl/go1.21.4.linux-amd64.tar.gz
+curl -o go.tar.gz -L https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
 ```
 
 ## RESTful API
