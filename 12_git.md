@@ -97,6 +97,11 @@ git fetch origin
 git reset --hard origin/feat/v1
 ```
 
+Pull `main` while current branch is `feat/v1`
+```sh
+git fetch origin main:main
+```
+
 Create a new branch that tracks the remote branch
 ```sh
 git branch --track feat/v1 origin/feat/v1
