@@ -344,3 +344,57 @@ ghcs -t git 'discard all local changes'
 ```sh
 ghcs -t git 'list stash, apply specific stash then delete it'
 ```
+
+## Alias
+
+```sh
+alias gf='git fetch'
+alias gfa='git fetch --all --tags --prune --jobs=10'
+alias gfg='git ls-files | grep'
+alias gfo='git fetch origin'
+
+alias ga='git add'
+alias gaa='git add --all'
+alias gapa='git add --patch'
+alias gau='git add --update'
+alias gav='git add --verbose'
+
+alias gb='git branch'
+alias gbD='git branch --delete --force'
+alias gba='git branch --all'
+alias gbd='git branch --delete'
+alias gbg='LANG=C git branch -vv | grep ": gone\]"'
+alias gbgD='LANG=C git branch --no-color -vv | grep ": gone\]" | cut -c 3- | awk '\''{print $1}'\'' | xargs git branch -D'
+alias gbgd='LANG=C git branch --no-color -vv | grep ": gone\]" | cut -c 3- | awk '\''{print $1}'\'' | xargs git branch -d'
+alias gbm='git branch --move'
+alias gbnm='git branch --no-merged'
+alias gbr='git branch --remote'
+
+alias gc='git commit --verbose'
+alias 'gc!'='git commit --verbose --amend'
+alias gcB='git checkout -B'
+alias gca='git commit --verbose --all'
+alias 'gca!'='git commit --verbose --all --amend'
+alias gcam='git commit --all --message'
+alias 'gcan!'='git commit --verbose --all --no-edit --amend'
+alias 'gcann!'='git commit --verbose --all --date=now --no-edit --amend'
+alias 'gcans!'='git commit --verbose --all --signoff --no-edit --amend'
+alias gcas='git commit --all --signoff'
+alias gcasm='git commit --all --signoff --message'
+alias gcmsg='git commit --message'
+
+alias glg='git log --stat'
+alias glgg='git log --graph'
+alias glgga='git log --graph --decorate --all'
+alias glgm='git log --graph --max-count=10'
+alias glgp='git log --stat --patch'
+alias glo='git log --oneline --decorate'
+alias globurl='noglob urlglobber '
+alias glod='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset"'
+alias glods='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset" --date=short'
+alias glog='git log --oneline --decorate --graph'
+alias gloga='git log --oneline --decorate --graph --all'
+alias glol='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset"'
+alias glola='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --all'
+alias glols='git log --graph --pretty="%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ar) %C(bold blue)<%an>%Creset" --stat'
+```
