@@ -33,9 +33,9 @@ https://github.com/nodesource/distributions
 
 Ubuntu
 ```sh
-wget -O node22.sh https://deb.nodesource.com/setup_22.x
-sudo -E bash node22.sh
-apt install -y nodejs
+wget -O node23.sh https://deb.nodesource.com/setup_23.x
+sudo -E bash node23.sh
+sudo apt-get install -y nodejs
 ```
 
 ```sh
@@ -58,6 +58,23 @@ npm list -g --depth=0
 export PATH=$PATH:$(npm get prefix)/bin
 ```
 
+## bun
+
+Linux
+```sh
+curl -fsSL https://bun.sh/install | bash
+```
+
+MacOS
+```sh
+brew install oven-sh/bun/bun
+```
+
+```sh
+bun upgrade
+bun --version
+```
+
 ## Java
 
 Ubuntu
@@ -76,23 +93,6 @@ MacOS ARM
 ```sh
 wget -O java21.pkg https://corretto.aws/downloads/latest/amazon-corretto-21-aarch64-macos-jdk.pkg
 open java21.pkg
-```
-
-## bun
-
-Linux
-```sh
-curl -fsSL https://bun.sh/install | bash
-```
-
-MacOS
-```sh
-brew install oven-sh/bun/bun
-```
-
-```sh
-bun upgrade
-bun --version
 ```
 
 ## Python
