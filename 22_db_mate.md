@@ -48,7 +48,10 @@ dbmate rollback
 ```
 
 ```sh
-dbmate -u 'mysql://root:1234@localhost:3306/poc' -d ~/compose/poc up -s ~/compose/poc
+dbmate \
+-u 'mysql://root:1234@localhost:3306/poc' \
+-d ~/compose/poc \
+up -s ~/compose/poc
 ```
 
 `yyyymmddHHmmss_create_fruits_table.sql`
