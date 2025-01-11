@@ -12,7 +12,6 @@ git config --global pull.rebase 'true'
 git config --global rebase.autoStash 'true'
 git config --global pager.branch 'false'
 git config --global core.editor 'nano'
-git config --global alias.log1 'log --graph --oneline --decorate'
 ```
 
 Use Visual Studio Code
