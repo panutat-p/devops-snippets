@@ -47,13 +47,6 @@ Multiple remote
 ## Aliases
 
 ```sh
-alias l='ls -laF'
-alias ll='ls -lF'
-alias k='kubectl'
-alias d='docker'
-alias dcl='docker container ls -a'
-alias dcs='docker container stop $(docker container ls -aq)'
-alias dcr='docker rm -f $(docker container ls -aq)'
 alias g='git status'
 alias gp='git push'
 alias gtrack='git push -u .'
