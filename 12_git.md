@@ -44,6 +44,33 @@ Multiple remote
     path = ~/github/.gitconfig
 ```
 
+## Aliases
+
+```sh
+alias l='ls -laF'
+alias ll='ls -lF'
+alias k='kubectl'
+alias d='docker'
+alias dcl='docker container ls -a'
+alias dcs='docker container stop $(docker container ls -aq)'
+alias dcr='docker rm -f $(docker container ls -aq)'
+alias g='git status'
+alias gp='git push'
+alias gpu='git push -u origin'
+alias gl='git log --graph --oneline --decorate'
+alias ga='git add'
+alias gr='git rm --cached'
+alias gre='git restore'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gb='git branch'
+alias gba='git branch --all'
+alias gbd='git branch -d'
+alias gbD='git branch -D'
+alias gsw='git switch'
+alias gdiff='git diff'
+```
+
 ## Remote
 
 ```sh
