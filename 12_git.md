@@ -48,6 +48,7 @@ Multiple remote
 
 ```sh
 alias g='git status'
+alias pull='git pull'
 alias gp='git push'
 alias gtrack='git push -u .'
 alias gl='git log --graph --oneline --decorate'
