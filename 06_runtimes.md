@@ -8,8 +8,8 @@ https://go.dev/doc/install
 
 ```sh
 rm -rf /usr/local/go
-wget -O go.tar.gz https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
-wget -O go.tar.gz https://go.dev/dl/go1.23.4.linux-arm64.tar.gz
+wget -O go.tar.gz https://go.dev/dl/go1.24.0.linux-amd64.tar.gz
+wget -O go.tar.gz https://go.dev/dl/go1.24.0.linux-arm64.tar.gz
 tar -C /usr/local -xzf go.tar.gz
 ```
 
