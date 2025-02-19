@@ -35,5 +35,5 @@ wget -m https://example.com
 
 Resume the download
 ```sh
-wget -c https://go.dev/dl/go1.23.4.linux-amd64.tar.gz
+wget -c https://go.dev/dl/go1.24.0.linux-amd64.tar.gz
 ```
